@@ -62,11 +62,11 @@ Revisar y ejecutar cada comando, hacerlo como practica
 Profesor Ariel Betancud
 
 # CLASE 2 MIÉRCOLES 22 DE ABRIL DEL 2026
-Abrir git bash en Window o la terminal de Linux o de Mac: al abrir Git Bash hacerlo como administrador
+## Abrir git bash en Window o la terminal de Linux o de Mac: al abrir Git Bash hacerlo como administrador
 
 
 touch vacio.txt #Crea un archivo con su extención: ESCRIBIR DENTRO
-
+```sh
 ctrl + s #Guardamos lo que escribimos en el archivo
 
 ./ #Significa la carpeta actual
@@ -141,8 +141,68 @@ git commit -m "Mi segundo commit"
 
 git log historia.txt #Vemos toda la historia de este archivo, el número largo es el hash del commit
 
+```
 
+Revisar y ejecutar cada comando, hacerlo como practica
 
+Profesor Ariel Betancud
+
+# CLASE 3 MIÉRCOLES 29 DE ABRIL DEL 2026
+## Analizar cambios en los archivos de tu proyecto Git parte 3
+
+Ingresamos de la siguiente manera:
+
+Abrir git bash en Window o la terminal de Linux o de Mac: al abrir Git Bash hacerlo como administrador, en terminal también o usar sudo para permisos especiales.
+
+cd tecnicaturagit #Ingresamos al direcotorio donde están nuestras carpetas de trabajo
+
+```sh
+ls #Vemos los archivos y directorios que ya tenemos
+
+cd git #No hay nada
+
+cd .. #Salimos
+
+rm historia.txt #Eliminamos el archivo que habíamos hecho, esto en git bash (window) esto es para practica
+
+rm Git #rm: cannot remove 'Git': Is a directory
+
+rm --recursive -R Git #By default, rm does not remove directories.  Use the --recursive (-r or -R) arguments
+
+option to remove each listed directory, too, along with all of its contents. Esto es para practica
+
+rm --help #Nos muestra lo que les puse arriba como documentación en Inglés.
+
+mkdir class-git #Creamos la carpeta o directorio para trabajar en Git local por ahora.
+
+cd class-git #Entramos para crear el README.md para este sector.
+
+touch README.md #Vamos a crear un archivo nuevo, md significa markdown y se pueden trabajar con editores de texto, este es un lenguaje que transforma el texto a html.
+
+Enlace a la documentación en GitHub de MARKDOWN
+
+Leemos la documentación para ir creando en README.md como lo enseña GitHub.
+
+code . #Abrimos VSC para editar el archivo.
+
+Empezamos a cargar lo visto en las clases anteriores (Comandos) en el README y pasamos a commitear
+
+git status
+
+git add .
+
+git status
+
+git commit -m "Cargamos el README dentro del directorio class-git"
+
+git status
+
+git log #Para ver los dos commits hechos: Si tienes commiteada alguna clase anterior veras mas commits de los que yo tengo.
+
+cd ..
+
+cd ..
+```
 Revisar y ejecutar cada comando, hacerlo como practica
 
 Profesor Ariel Betancud
