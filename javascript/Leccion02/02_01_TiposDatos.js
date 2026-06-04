@@ -63,16 +63,16 @@ console.log(typeof x);//funcion typeof asigna undefined marcado...//
 x = undefined;
 console.log(typeof x);
 
-//null: ausencia de valor...//
+//null: significa ausencia de valor...//
 var y = null;//null no es un tipo de dato, pero su origen es de tipo object...//
 console.log(typeof y);
 
 //Tipo de Dato Array y Empty string...//
-var autos = ["Ford","Chevrolet","Fiat","Renault"];
+var autos = ["Ford","Chevrolet","Fiat","Renault"];//array poseen corchetes y comillas....//
 console.log(autos);
-console.log(typeof autos);
+console.log(typeof autos);//Preguntamos que tipo de dato, es de tipo:
 
-var z ="";
+var z ='';
 console.log(z);//Esto se refiere a que es una cadena vacia, ¨[Empty string]
 //El profesor al ejecutar muestra de tipo [empty string] a mi NO solo ""...//
 console.log(typeof z);
