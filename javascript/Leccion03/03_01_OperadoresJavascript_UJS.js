@@ -40,10 +40,10 @@ function saludar() {
 }
 // console.log(nombre3) Aqui no lee el dato de la funcion...//
 
-if (true) {
-    var edad = 34;
-    console.log(edad);
-}
+//if (true) {
+ //   var edad = 34;
+ //   console.log(edad);
+//}
 console.log(edad); //En la funcion funciono correctamente, en la estructura if fallo.
 //Interpreta que la variable está definida, es un fallo...
 
@@ -71,4 +71,42 @@ Se utiliza para valores constantes que no pueden ser reasignados...
 const fechaNacimiento = 1984;
 console.log(fechaNacimiento);
 //fechaNacimiento = 2009;//No se puede reasignar un valor a una constante, da error...//
-//console.log(fechaNacimiento) solo se ejecutaría el log anterior...//s
+//console.log(fechaNacimiento) solo se ejecutaría el log anterior...//
+
+// Ejercicio: si el padre puede asistir al juego de su hijo...//
+let vacaciones = true, diaLibre = false;
+if(vacaciones || diaLibre){
+    console.log('El padre puede asistir al juego de su hijo');
+}  
+else{
+    console.log('El padre NO puede asistir al juego de su hijo');
+}
+
+//Operador Ternario...//
+let resultado2 = 3 > 5 ?  'Verdadero' : 'Falso';
+console.log(resultado2);
+let numero = 12;
+resultado2 = numero % 2 === 0 ? 'Verdadero' : 'Falso';
+console.log(resultado2)
+
+//Convertir String a Number...//
+let miNumero = '18';//Es una cadena ...//
+console.log(typeof miNumero); 
+let edad2 = Number(miNumero); //Esta es una funcion ...//
+//Funcion is NaN...//
+console.log(typeof edad2);
+if(isNaN(edad2)){//No es un numeror = is Not a Number (devuelve un resultado Boolean)...//
+    console.log('Esta variable no contiene solo numeros');
+}
+else{
+    if(edad2>=18){
+    console.log('Puede votar')
+    }
+    else{
+    console.log('Muy joven para votar');
+    }
+}
+
+//con operador ternario...//
+let resultado3 = edad2 >= 18 ? 'Puede votar' : 'Muy joven para votar';
+console.log(resultado3);
