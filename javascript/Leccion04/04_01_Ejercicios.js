@@ -58,3 +58,106 @@ switch (mes){//No solo se puede utilizar numero, tambien cadenas...//
 }
 console.log('El valor corresponde a la estacion de: ' + estacion);
 //si asignamos string va generar error, porque la comparacion es estricta...//
+
+/*Ejercicio 3: const se utiliza para valores constantes que, 
+no pueden ser reasignados, es decir, no pueden cambiar su valor...//*/
+
+const fechaNacimiento = 1984;
+console.log(fechaNacimiento);
+/*fechaNacimiento = 1984;
+//console.log(fechaNacimiento);...solo se ejhecuta el console anterior...//
+//Si queremos cambiar el valor de una variable va a generar error...//*/
+
+//Evita repetir tu codigo...
+//Dry don't repeat yourself...//
+
+let days = 3;
+switch (days) {
+    case 1:
+        console.log('Hoy es lunes');
+        break;
+    case 2:
+        console.log('Hoy es martes');
+        break;
+    case 3:
+        console.log('Hoy es miercoles');
+        break;
+    case 4:
+        console.log('Hoy es jueves');
+        break;
+    case 5:
+        console.log('Hoy es viernes');
+        break;
+    case 6:
+        console.log('Hoy es sabado');
+        break;
+    case 7:
+        console.log('Hoy es domingo');
+        break;
+    default:
+        console.log('Error en el ingreso del dia de la semana');
+        break;
+}//esta esta en 27 lineas...//
+
+//Esta es la opcion mejorada...//8 lineas...
+
+
+
+/*Ejercicio 4: Hacer meses del año, en switch y 
+version funcion declarada...//*/
+
+//Estructura Switch...//
+let month = 2;
+switch (month) {
+    case 1:
+        console.log('It is January');
+        break;
+    case 2:
+        console.log('It is February');
+        break;
+    case 3:
+        console.log('It is March');
+        break;
+    case 4:
+        console.log('It is April');
+        break;
+    case 5:
+        console.log('It is May');
+        break;
+    case 6:
+        console.log('It is June');
+        break;
+    case 7:
+        console.log('It is July');
+        break;
+    case 8:
+        console.log('It is August');
+        break;
+    case 9:
+        console.log('It is September');
+        break;
+    case 10:
+        console.log('It is October');
+        break;
+    case 11:
+        console.log('It is November');
+        break;
+    case 12:
+        console.log('It is December');
+        break;
+    default:
+        console.log('Error, Invalid month input');
+        break;
+}
+
+//Dry don't repeat yourself...Evita repetir tu codigo...//
+
+//Funcion Declarada ...//
+let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+function getMonth(n){
+    if(n < 1 || n > 12){
+        throw new Error('Invalid month input');
+    }
+    return months[n-1];
+}
+console.log(getMonth(4));
