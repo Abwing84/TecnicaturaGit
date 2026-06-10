@@ -1,6 +1,12 @@
-
+//Nuestro primer programa Hola Mundo...una linea...//
+/*
+muchas lineas, comentarios extensivos: de muchas lineas
+mas 
+mas
+*/
 public class HolaMundo {
     public static void main(String[] args) {
+        //Escribe tu codigo desde aqui...//
         System.out.println("Hola mundo desde Java");
     
         int miVariable = 10;
