@@ -72,7 +72,7 @@ public class HolaMundo {
         System.out.println("escriba la profesion: ");
         var profesion2 = entrada.nextLine();
         System.out.println("Resultado = " + profesion2 +" " + usuario2);
-        */
+         
 //Ejercicio: Detalles del Libro (scanner)...//
         Scanner entrada = new Scanner(System.in);
         System.out.println("Digite nombre del Libro: ");
@@ -80,7 +80,45 @@ public class HolaMundo {
         System.out.println("libro = " + libro);
         System.out.println("Escriba el nombre del autor: ");
         var autor = entrada.nextLine();
-        System.out.println("El libro: \"" + libro +"\" fue escrito por " + autor);
+        System.out.println("El libro: \"" + libro + "\" fue escrito por " + autor);
+         */
+//DATOS PRIMITIVOS ENTEROS...// 
+//Ejercicio: Tipo Entero Byte...//
+        byte numeroEnteroByte = 127;//Hay perdida de precision...//
+        System.out.println("numeroEnteroByte: " + numeroEnteroByte);
+        System.out.println("Valor minimo del Byte:" + Byte.MIN_VALUE);
+        System.out.println("Valor maximO del Byte:" + Byte.MAX_VALUE);
+
+//Ejercicio: Tipo Entero Short...//
+        short numeroEnteroShort = 32767;//precision se pierde, lo muestra negativo...//
+        System.out.println("numeroEnteroShort: " + numeroEnteroShort);
+        System.out.println("Valor minimo del Short: " + Short.MIN_VALUE);
+        System.out.println("Valor maximo del Short: " + Short.MAX_VALUE);
+
+//Ejercicio: Tipo Entero Int...//
+        int numeroEnteroInt = 2147483647;//El entero es muy largo no hay solucion, superar el max de la literal, si agrego 8int)...L se soluciona...//
+        System.out.println("numeroEnteroInt: " + numeroEnteroInt);
+        System.out.println("Valor minimo del Int: " + Integer.MIN_VALUE);
+        System.out.println("Valor maximo del Int: " + Integer.MAX_VALUE);
+
+//Ejercicio: Tipo Entero Lon...//
+        long numeroEnteroLong = 9223372036854775807L;//Excede la cant. de numeros, por default java toma como int, agregar L...//
+        System.out.println("numeroEnteroLong: " + numeroEnteroLong);
+        System.out.println("Valor minimo del Long: " + Long.MIN_VALUE);
+        System.out.println("Valor maximo del Long: " + Long.MAX_VALUE);
+
+//DATOS PRIMITIVOS FLOTANTES...//
+//Ejercicio: Tipo Float...//
+        float numFloat = 3.4028235E38F;//Lo toma como double, por eso le agrego el F o (float)adelante...//
+        System.out.println("numFloat: " + numFloat);
+        System.out.println("Valor minimo de Float: " + Float.MIN_VALUE);
+        System.out.println("Valor maximo de Float: " + Float.MAX_VALUE);
+
+//Ejercicio: Tipo Double...//
+        double numDouble = 1.7976931348623157E308D;
+        System.out.println("numDouble: " + numDouble);
+        System.out.println("valor minimo de Double: " + Double.MIN_VALUE);
+        System.out.println("Valor maximo de Double: " + Double.MAX_VALUE);
 
     }
 }
