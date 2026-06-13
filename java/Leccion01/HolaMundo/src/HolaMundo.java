@@ -84,7 +84,7 @@ public class HolaMundo {
          */
 //DATOS PRIMITIVOS ENTEROS...// 
 //Ejercicio: Tipo Entero Byte...//
-        byte numeroEnteroByte = 127;//Hay perdida de precision...//
+        /*byte numeroEnteroByte = 127;//Hay perdida de precision...//
         System.out.println("numeroEnteroByte: " + numeroEnteroByte);
         System.out.println("Valor minimo del Byte:" + Byte.MIN_VALUE);
         System.out.println("Valor maximO del Byte:" + Byte.MAX_VALUE);
@@ -118,7 +118,38 @@ public class HolaMundo {
         double numDouble = 1.7976931348623157E308D;
         System.out.println("numDouble: " + numDouble);
         System.out.println("valor minimo de Double: " + Double.MIN_VALUE);
-        System.out.println("Valor maximo de Double: " + Double.MAX_VALUE);
+        System.out.println("Valor maximo de Double: " + Double.MAX_VALUE);*/
 
+//Inferencia de tipo var y tipo primitivo...//
+        /*var numEntero = 20;//Las literales sin punto automaticamente son de tipo int...//
+        System.out.println("numEntero = " + numEntero);
+        var numFloat = 10.0F;//Automaticamente con el punto se transforma en tipo double...//
+        System.out.println("numFloat = " + numFloat);//pone f detras de la variable...//
+        var numDouble = 10.0;
+        System.out.println("numDouble = " + numDouble);*/
+        
+//Tipos primitivos char...//
+        char miVariableChar = 'a';//Solo almacena un caracter y con comillas simples 'a'...//
+        System.out.println("miVariableChar = " + miVariableChar);
+        char varCaracter = '\u0024';//Indicamos a Java la asignacion con el codigo unicode...//
+        System.out.println("varCaracter = " + varCaracter);
+        char varCaracterDecimal = 36;//Valor decimal del juego de caracteres unicode...//
+        System.out.println("varCaracterDecimal = " + varCaracterDecimal);
+        char varCaracterSimbolo = '$';//Un caracter especial, podemos copiar y pegar de unicode...//
+        System.out.println("varCaracterSimbolo = " + varCaracterSimbolo);
+
+        //copy paste y vemnos con var...//
+        var varCaracter1 = '\u0024';//Indicamos a Java la asignacion con el codigo unicode...//
+        System.out.println("varCaracter = " + varCaracter1);
+        var varCaracterDecimal1 = (char)36;//Valor entero y le asigna un tipo int...//
+        System.out.println("varCaracterDecimal = " + varCaracterDecimal1);
+        var varCaracterSimbolo1 = '$';//Un caracter especial, podemos copiar y pegar de unicode...//
+        System.out.println("varCaracterSimbolo = " + varCaracterSimbolo1);
+        
+        int varEnteroChar = '$';//MUESTRA EL VALOR DECIMAL EN LA VARIABLE TIPO ENTERO ASOCIADO AL SIMBOL UNICODE...
+        System.out.println("varEnteroChar = " + varEnteroChar);
+        int caracterChar = 'b';
+        System.out.println("caracterChar = " + caracterChar);
+        
     }
 }
