@@ -127,9 +127,8 @@ public class HolaMundo {
         System.out.println("numFloat = " + numFloat);//pone f detras de la variable...//
         var numDouble = 10.0;
         System.out.println("numDouble = " + numDouble);*/
-        
 //Tipos primitivos char...//
-        char miVariableChar = 'a';//Solo almacena un caracter y con comillas simples 'a'...//
+        /*ar miVariableChar = 'a';//Solo almacena un caracter y con comillas simples 'a'...//
         System.out.println("miVariableChar = " + miVariableChar);
         char varCaracter = '\u0024';//Indicamos a Java la asignacion con el codigo unicode...//
         System.out.println("varCaracter = " + varCaracter);
@@ -149,7 +148,51 @@ public class HolaMundo {
         int varEnteroChar = '$';//MUESTRA EL VALOR DECIMAL EN LA VARIABLE TIPO ENTERO ASOCIADO AL SIMBOL UNICODE...
         System.out.println("varEnteroChar = " + varEnteroChar);
         int caracterChar = 'b';
-        System.out.println("caracterChar = " + caracterChar);
+        System.out.println("caracterChar = " + caracterChar);*/
+//Tipos primitivos - tipos booleanos...//
+        /*var varBool = false;//tipo bandera...//
+        System.out.println("varBool = " + varBool);
         
+        if (varBool){
+            System.out.println("La bandera es verde");    
+        }//llaves que olvidamos..., la marcamos se enlaza con la que lo abrio...//
+        else{
+            System.out.println("La bandera es roja");
+        }
+        //Algoritmo: ¿Es mayor de edad?
+        var edad = 18;//Literal tener presente la inferencia de tipo...//
+        //var adulto = edad >= 18;//Esta es una expresion booleana...//
+        if(edad>= 18){
+            System.out.println("Es mayor de edad");
+        }
+        else{
+            System.out.println("Es menor de edad");
+        }*/
+//Conversion de tipos primitivos en java parte 01...//
+//        var edad = Integer.parseInt("20");//Necesita un string para convertir en entero...//
+//        System.out.println("edad = " + (edad + 1));
+//
+//        var valorPI = Double.parseDouble("3.1416");
+//        System.out.println("valorPI = " + valorPI);
+//
+////Pedir un valor...//
+        var entrada = new Scanner(System.in);//scanner activo - metod nextLine funciona...//
+//        System.out.println("Digite su edad");
+//        edad = Integer.parseInt( entrada.nextLine());
+//        System.out.println("edad = " + edad);
+//Conversion de tipos primitivos en Java pare 02...//Tipo Entero al tipo string...//
+        var edadTexto = String.valueOf(10);//tipo de datos entero a string...//
+        System.out.println("edadTexto = " + edadTexto);
+        
+        var fraseChar = "programadores".charAt(4);
+        System.out.println("fraseChar = " + fraseChar);
+        
+        System.out.println("Digite un caracter: ");
+        fraseChar = entrada.nextLine().charAt(0);//de un string toma un solo caracter...//
+        System.out.println("fraseChar = " + fraseChar);
+        //el metodo recupera cadena, solo string tiene este metodo...//
+      
+      
     }
 }
+ 
