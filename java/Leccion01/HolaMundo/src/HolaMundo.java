@@ -169,17 +169,17 @@ public class HolaMundo {
             System.out.println("Es menor de edad");
         }*/
 //Conversion de tipos primitivos en java parte 01...//
-//        var edad = Integer.parseInt("20");//Necesita un string para convertir en entero...//
-//        System.out.println("edad = " + (edad + 1));
-//
-//        var valorPI = Double.parseDouble("3.1416");
-//        System.out.println("valorPI = " + valorPI);
-//
-////Pedir un valor...//
+        /*var edad = Integer.parseInt("20");//Necesita un string para convertir en entero...//
+        System.out.println("edad = " + (edad + 1));
+
+        var valorPI = Double.parseDouble("3.1416");
+        System.out.println("valorPI = " + valorPI);
+
+//Pedir un valor...//
         var entrada = new Scanner(System.in);//scanner activo - metod nextLine funciona...//
-//        System.out.println("Digite su edad");
-//        edad = Integer.parseInt( entrada.nextLine());
-//        System.out.println("edad = " + edad);
+        System.out.println("Digite su edad");
+//      edad = Integer.parseInt( entrada.nextLine());
+//      System.out.println("edad = " + edad);
 //Conversion de tipos primitivos en Java pare 02...//Tipo Entero al tipo string...//
         var edadTexto = String.valueOf(10);//tipo de datos entero a string...//
         System.out.println("edadTexto = " + edadTexto);
@@ -192,7 +192,54 @@ public class HolaMundo {
         System.out.println("fraseChar = " + fraseChar);
         //el metodo recupera cadena, solo string tiene este metodo...//
       
-      
+//Operadores Aritmeticos...//class7
+        //SUMA...//
+        int num1 = 5, num2 = 4;
+        var solucion = num1 + num2;
+        System.out.println("Solucion de la suma= " + solucion);
+        //RESTA...//
+        solucion = num1 - num2;
+        System.out.println("Solucion de la resta= " + solucion);
+        //MULTIPLICACION...//
+        solucion = num1 * num2;
+        System.out.println("solucion de la multiplicacion= " + solucion);
+        //DIVISION...//
+        solucion = num1 / num2;
+        System.out.println("solucion de la division= " + solucion);
+        //FLOAT / INT...//
+        var solucion2  = 3.4 / num2;
+        System.out.println("solucion2 resultado de la division= " + solucion2);
+        //RESIDUO DE LA DIVISION...//
+        solucion = num1 % num2;//Guarda el residuo entero de la division...//
+        System.out.println("solucion = " + solucion);// 
+        //NUMERO PAR O IMPAR...//
+        if (num2 % 2 == 0)//No es necesario {} porque se utilizan una sola linea de codigo
+            System.out.println("Es un numero Par");//la linea de impresion por bloque...//
+        else
+            System.out.println("Es un numero Impar");*/
+    //Operadores de Asignacion...//
+        int varNum1 = 3, varNum2 = 4;
+        var varNum3 = varNum1 + 6 - varNum2;//una operacion...//
+        System.out.println("varNum3 = " + varNum3);
+        
+    //Operador de Asignacion; tambien se le llama Operador de Composicion...//
+        varNum1 += 1; //varNum1 = varNum1 + 1;...//
+        System.out.println("varNum1 = " + varNum1);
+        
+        varNum3 -= 2; //varNum3 = varNum3 - 1;...//
+        System.out.println("varNum1 = " + varNum1);
+        
+        varNum2 *= 4; //varNum2 = varNum2 * 4;...//
+        System.out.println("varNum1 = " + varNum1);
+        
+        varNum1 /= 3; //varNum1 = varNum1 / 3;...//
+        System.out.println("varNum1 = " + varNum1);
+        
+        varNum2 %= 5; //varNum2 = varNum2 % 5;...//
+        System.out.println("varNum1 = " + varNum1);
+        
+        
     }
-}
+}    
+        
  
