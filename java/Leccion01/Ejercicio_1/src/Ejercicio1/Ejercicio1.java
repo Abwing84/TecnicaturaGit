@@ -2,7 +2,7 @@
 package Ejercicio1;
 
 import java.util.Scanner;//*...//
-
+//Ejercicio 1: Tienda de libros...//
 
 public class Ejercicio1 {
     public static void main(String[] args) {//psvm+tab clase main...//
