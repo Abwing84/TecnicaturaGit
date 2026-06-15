@@ -1,2 +1,45 @@
 /java/Leccion01/ActividadClase9/nbproject/private/
 /java/Leccion01/ActividadClase9/build/
+/java/Leccion01/Ejercicio_4/nbproject/private/
+/java/Leccion01/Ejercicio_4/build/
+/java/Leccion01/Ejercicio_5/nbproject/private/
+/java/Leccion01/Ejercicio_5/build/
+/java/Leccion01/Ejercicio_6/nbproject/private/
+/java/Leccion01/Ejercicio_6/build/
+/java/Leccion01/Ejercicio_7/nbproject/private/
+/java/Leccion01/Ejercicio_7/build/
+/java/Leccion01/Leccion02/nbproject/private/
+/java/Leccion02/Leccion_02/nbproject/private/
+/java/Leccion02/Leccion_02/build/
+/java/Leccion02/CondicionalEjercicio_1/nbproject/private/
+/java/Leccion02/CondicionalEjercicio_1/build/
+/java/Leccion02/CondicionaEjercicio_2/nbproject/private/
+/java/Leccion02/CondicionaEjercicio_2/build/
+/java/Leccion02/CondicionalEjercicio_3/nbproject/private/
+/java/Leccion02/CondicionalEjercicio_3/build/
+/java/Leccion02/CondicionalEjercicio_2/build/
+/java/Leccion02/CondicionalEjercicio_2/nbproject/private/
+# =========================
+# Java / NetBeans
+# =========================
+nbproject/private/
+build/
+dist/
+
+# =========================
+# Visual Studio
+# =========================
+.vs/
+
+# =========================
+# Java compilados
+# =========================
+*.class
+*.jar
+
+# =========================
+# Logs y temporales
+# =========================
+*.log
+*.tmp
+*.bak
