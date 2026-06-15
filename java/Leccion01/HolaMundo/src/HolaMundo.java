@@ -217,29 +217,164 @@ public class HolaMundo {
             System.out.println("Es un numero Par");//la linea de impresion por bloque...//
         else
             System.out.println("Es un numero Impar");*/
-    //Operadores de Asignacion...//
-        int varNum1 = 3, varNum2 = 4;
+        //Operadores de Asignacion...//
+        /*int varNum1 = 3, varNum2 = 4;
         var varNum3 = varNum1 + 6 - varNum2;//una operacion...//
         System.out.println("varNum3 = " + varNum3);
-        
-    //Operador de Asignacion; tambien se le llama Operador de Composicion...//
+
+        //Operador de Asignacion; tambien se le llama Operador de Composicion...//
         varNum1 += 1; //varNum1 = varNum1 + 1;...//
         System.out.println("varNum1 = " + varNum1);
-        
+
         varNum3 -= 2; //varNum3 = varNum3 - 1;...//
         System.out.println("varNum1 = " + varNum1);
-        
+
         varNum2 *= 4; //varNum2 = varNum2 * 4;...//
         System.out.println("varNum1 = " + varNum1);
-        
+
         varNum1 /= 3; //varNum1 = varNum1 / 3;...//
         System.out.println("varNum1 = " + varNum1);
-        
+
         varNum2 %= 5; //varNum2 = varNum2 % 5;...//
-        System.out.println("varNum1 = " + varNum1);
+        System.out.println("varNum1 = " + varNum1);*/
+//Operadores Unarios: Cambio de Signos...//class8
+        /*var varA = 7;
+        var varB = -varA;
+        System.out.println("varA = " + varA);
+        System.out.println("varB = " + varB);//Resultado sera negativo...//
+
+        //Operadores de Negacion...//
+        var varC = true;//Esta literal por default en Java es de tipo boolean...//
+        var varD = !varC;//Aqui esta invirtiendo el valor...//
+        System.out.println("varC = " + varC);
+        System.out.println("varD = " + varD);
+
+//Operadores de Unarios de Incremento: Preincremento...//
+        var varE = 9;//se va a modificar su valor...//
+        var varF = ++varE;//simbolo antes de la variable...//
+        //Primero se incremeta la variable y despues se usa su valor...//
+        System.out.println("varE = " + varE);//Se incrementa en la unidad...//
+        System.out.println("varF = " + varF);//Va a sumar uno...//
+
+//Postincremento (el simbolo va despues de la variable...//
+        var varG = 3;
+        var varH = varG++; //Primero el valor de la variable, luego el incremento.../
+        System.out.println("varG = " + varG);
+        System.out.println("varH = " + varH);
+
+//Operadores Unarios de Decremento: Predecremento...//        
+        var varI = 4;
+        var varJ = --varI;
+        System.out.println("varI = " + varI);//La variable ya esta con decremento...//
+        System.out.println("varJ = " + varJ);
+
+//Postdecremento...//
+        var varK = 8;
+        var varL = varK--;//Primero el valor de la variable, luego queda el decremento...//
+        System.out.println("varK = " + varK);//Aqui va el decremnto en I...//
+        System.out.println("varL = " + varL);
+
+//Operadores de Igualdad y Relacionales...//
+        var aNum = 5;
+        var bNum = 5;//los (..) son opcionales...//
+        var cNum = (aNum == bNum);//Si es igual ==, Regresa un boolean...//
+        System.out.println("cNum = " + cNum);
+
+        var dNum = aNum != bNum;//Si es distinto !=, boolenas...//
+        System.out.println("dNum = " + dNum);
+        //Igualdad entre cadenas...//
+        var cadenaA = "Hello";
+        var cadenaB = "Bye bye";
+        var Cvar = cadenaA == cadenaB;//No compara contenido, compara referencia...//
+        System.out.println("Cvar = " + Cvar);//Valor boolean...//
+        //si queremos comparar el contenido de dos cadenas...//
+        var fVar = cadenaA.equals(cadenaB);
+        System.out.println("fVar = " + fVar);//Si compara de  forma interna en la cadena...//
+
+//Operadores Relacionales >, >=, <, <=, ==, !=...//
+        var gVar = aNum >= bNum;//realiza doble comprobacion...//
+        System.out.println("gVar = " + gVar);
+        
+        //estructura if-else...//
+        if (aNum % 2 == 0) {//si no utilizas las llaves, format las incorpora...//
+            System.out.println("El numero es par");
+        } else {//son necesarias evita conflictos, es una buena practica...//
+            System.out.println("El numero es Impar");
+        }
+       
+        var edad = 20;
+        var adulto = 18;
+        if(edad >= adulto){
+            System.out.println("Es mayor de edad");
+        }    
+        else{
+            System.out.println("Es menor de edad");
+        }*/
+//Operadores condicionales: And &&...//
+        /*var valorA = 11;
+        var valorMinimo = 0;
+        var valorMaximo = 10;
+        var respuesta = valorA >= 0 && valorA <= 10;//reglas de and 
+
+        if (respuesta) {
+            System.out.println("Esta dentro del rango establecido");
+        } else {
+            System.out.println("Esta fuera del rango establecido");
+        }
+        //Operador Or ||...//
+        var vacaciones = false;
+        var diaLibre = true;
+
+        if (vacaciones || diaLibre) {
+            System.out.println("Papa puede asistir al juego de su hija");
+        }
+        else{
+            System.out.println("Papa no puede asistir al juego de su hija");   
+        }*/
+        
+//Operador Ternario...//   1°condicion,2°resultado,3°resultado, por eso es Ternario      
+        /*var resultadoT = (5 > 8) ? "Verdadero" : "Falso";
+        System.out.println("resultadoT = " + resultadoT);
+        //solo para expresiones sencillas, sino if - else...//
+        var numeroT = 0;//posee tres partes como indico arriba al enumerarlas...//
+        resultadoT = (numeroT % 2 == 0) ? "Es par" : "Es impar";
+        System.out.println("resultadoT = " + resultadoT);*/
+
+//Prioridad de Operadores...//
+        /*var x = 5;
+        var y = 10;
+        var z = ++x + y--;
+        System.out.println("x = " + x);// x=6 ...//
+        System.out.println("y = " + y);// y=9 ...//
+        System.out.println("z = " + z);// z=16 ...//
+        
+        var solucionAritmetica = 4 + 5 * 6 / 3;//4 + ((5*6)/3)= (30/3)=10 + 4=14...//; 
+        System.out.println("solucionAritmetica = " + solucionAritmetica);
+        //La manipulacion de los parentesis altera la prioridad...//
+        solucionAritmetica = (4 + 5) * 6 / 3;//(4 + 5) = 9*6 = 54/3 = 18...//
+        System.out.println("solucionAritmetica = " + solucionAritmetica);*/
         
         
+/*Ejercicio: Saco Area y Perimetro de un Rectangulo y utilizo 
+Operador Ternario para obtener el numero mayor...//*/
+        //Medidas del Rectangulo...//
+        var base = 5;
+        var altura = 8;
+        System.out.println("Base: " + base);
+        System.out.println("Altura: " + altura);
+        
+        //Calculo del Area...//
+        var area = base * altura;
+        System.out.println("Area = " + area);
+        
+        //Calculo del Perimetro...//
+        var perimetro = 2 * (base + altura);
+        System.out.println("Perimetro = " + perimetro);
+        
+        //Utilizo el Operador Ternario...//
+        var mayor = (area > perimetro) ? area : perimetro;
+        System.out.println("El valor mayor entre Area y Perimetro es: " + mayor);
+
+       
     }
-}    
-        
- 
+}
