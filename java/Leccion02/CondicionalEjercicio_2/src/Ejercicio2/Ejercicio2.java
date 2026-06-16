@@ -25,5 +25,6 @@ public class Ejercicio2 {
                 estacion = "Verano";
         }  
         System.out.println("estacion = " + estacion);
+        
     }
 }
