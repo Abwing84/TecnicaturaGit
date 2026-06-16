@@ -100,8 +100,14 @@ switch (days) {
 }//esta esta en 27 lineas...//
 
 //Esta es la opcion mejorada...//8 lineas...
-
-
+let days2 = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo'];
+function getDay(n){
+    if(n < 1 || n > 7){
+        throw new error('out of range');
+    }
+    return days2[n-1];
+}
+console.log(getDay(5));
 
 /*Ejercicio 4: Hacer meses del año, en switch y 
 version funcion declarada...//*/
