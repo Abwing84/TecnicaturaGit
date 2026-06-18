@@ -204,6 +204,7 @@ if a % 2 == 0:
 else:
     print(f"El valor de a es: {a} es un numero Impar")
 """
+"""
 # Ejercicio 2: Determinar si es mayor de edad...//
 # 1. Solicitamos que el usuario ingrese un numero
 # 2. Alamacenar en una variable...//
@@ -219,6 +220,130 @@ if edadPersona >= edadAdulto:
     print(f"Su edad es: {edadPersona} años, usted es mayor de edad")
 else:
     print(f"Su edad es: {edadPersona} años, usted es menor de edad")
+"""
+#Class 05
+# Operadores Logicos...//
+"""
+# Operador and...//
+a = True
+b = True
+resultado = a and b
+print(resultado)
+# Operador or...//
+resultado = a or b
+print(resultado)
 
+# Operador not...// unario
+resultado = not a
+print(resultado)
+"""
+"""
+# Ejercicio: Valor dentro del rango...//
+# 1. Pedimos al usuario un valor.
+# 2. Verificar si el valor se encuentra entre rango 0 a 5.
+# 3. La formula es: <num> >= 0 and <num> <= 5.
+# Hacerlo en Pycharm...///
 
+valor = int(input("Digite un numero dentro del rango 0 a 5: "))
+valorMinimo = 0
+valorMaximo = 5
+dentroRango = valor >= valorMinimo and valor <= valorMaximo
+if dentroRango:
+    print(f"El valor {valor} esta dentro del rango")
+else:
+    print(f"El valor {valor} no esta dentro del rango")
+"""
+"""
+# Ejercicio: Operador or, Operador not...//
+# La pregunta es si un padre puede asistir al juego de su hijo.
+# 1. Verificamos si tiene vacaciones.
+# 2. Verificamos si tiene el dia libre.
+# 3.Usar estructura if - else.
+# 4. Imprimir.
+# Hacerlo en Pycharm...//
+
+vacaciones = True
+diaDescanso = True
+if not(vacaciones or diaDescanso):
+    print("Tiene trabajo que hacer")
+else:
+    print("Puede asistire al juego")
+"""
+"""
+# Ejercicio: Rango entre las edades 20 y 30 años...//
+# Observa el final: Sintaxis simplificada del Operador and *1...//
+# 1. Preguntar la edad al usuario.
+# 2. Si la edad esta dentro de los 20 o 30 años, esta dentro del rango.
+# 3. Combinamos los operadores and y or para saber si el usuario esta dentro del rango.
+# Hacerlo en Pycharm...//
+
+edad = int(input("Digite su edad : "))
+#veinte = edad >= 20 and edad < 30
+#print(veinte)
+#treinta = edad >= 30 and edad < 40
+#print(treinta)
+# Sintaxis simplificada del Operador and *1...//
+# if veinte or treinta:
+if(20 <= edad < 30) or ( 30 <= edad < 40):# *1 simplifica el and...//
+    print("Estas dentro del rango de los (20'0) a (30'0) años")
+#    if veinte: #indentacion un tab, abajo en la identacion hay dos tab...//
+#        print('Estas dentro del rango de los (20\'0) años')
+#    elif treinta:
+#        print("Estas dentro del rango de los (30'0) años")
+#    else:
+#        print('no estas dentro del rango')
+else:
+    print("No estas dentro del rango de los (20'0) a los (30'0) años ")
+"""
+"""
+# Ejercicio: El mayor de dos numeros...//
+# Solicita al usuario dos valores, determinar cual es el mayor.
+# 1. Solicita al usuario dos valores
+# numero1 (int)
+# numero2 (int)
+# Se debe imprimir el mayor
+# (la salida debe ser)
+# Digite el valor para el numero1
+# Digite el valor para el numero2
+# El numero mayor es: <numeroMayor>
+
+numero1 = int(input("Digite un valor para el numero1: "))
+numero2 = int(input("Digite un valor para el numero2: "))
+# Utilizacion modo debug main...//
+if numero1 > numero2:
+    print("El numero1 es mayor")
+else:
+    print("El numero2 es mayor")
+"""
+# Ejercicio: Tienda de libros...//
+# 1. Mostrar: Ingrese los siguientes datos del libro.
+# 2. Digite el nombre del libro.
+# 3. Digite el ID del libro.
+# 4. Digite el precio del libro.
+# 5. Indicar si el envio es gratuito(True/False)
+# 6. Mostrar:
+#       Nombre:
+#       ID:
+#       Precio:
+#       Envio Gratuito:
+
+print("Digite los siguientes Datos ")
+nombre = input("Digite el nombre del libro: ")
+id = int(input("Digite el ID del libro: "))
+precio = float(input("Digite el precio del libro: "))
+envioGratuito = input("Indicar si el envio es gratuito (True/False): ")
+
+if envioGratuito == "True":
+    envioGratuito = True
+elif envioGratuito == "False":
+    envioGratuito = False
+else:
+    envioGratuito = "El valor es incorrectop, debe escribir True/False"
+print(f'''
+        Nombre: "{nombre}"
+        ID: {id}
+        Precio: ${precio}
+        Envio Gratuito?: {envioGratuito}
+        
+''')
 
