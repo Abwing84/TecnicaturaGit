@@ -115,7 +115,7 @@ print("Neutros:", conteoNeutros)
 # 10 alumnos. Realizar un algoritmo para calcular la calificación promedio y la
 # calificación más baja del grupo...//
 """suma = 0
-calificacion_baja = 9999
+calificacionBaja = 9999
 i = 1
 while True:
     if i > 10:
@@ -132,18 +132,91 @@ while True:
     suma += calificacion
 
     # Buscar la menor calificación
-    if calificacion < calificacion_baja:
-        calificacion_baja = calificacion
+    if calificacion < calificacionBaja:
+        calificacionBaja = calificacion
     i += 1
 
 # Promedio
-calificacion_promedio = suma / 10
+calificacionPromedio = suma / 10
 
-print("La calificación promedio es:", calificacion_promedio)
-print("La calificación más baja es:", calificacion_baja)
+print("La calificación promedio es:", calificacionPromedio)
+print("La calificación más baja es:", calificacionBaja)
 """
 
+# Class 09
+# Ejercicios 5: Calcula el factorial de un numero >= 0...//
+"""num = int(input("Digite un número mayor o igual a 0: "))
 
+if num < 0:
+    print("Error, el número debe ser mayor o igual a 0")
+else:
+    i = 1
+    factorial = 1
 
+    while i <= num:
+        # Ejemplo de uso de continue: saltar el 0 (aunque no afecta el factorial)
+        if i == 0:
+            i += 1
+            continue
+
+        factorial *= i
+        i += 1
+
+    print(f"El factorial de {num} es: {factorial}")
+"""
+
+# Ejercicio 6: Suma de pares, conteo de pares y promedio de impares...//
+
+"""n_elementos = int(input("Digite la cantidad de elementos a ingresar: "))
+
+# Inicialización de variables
+sumaPares = 0
+conteoPares = 0
+sumaImpares = 0
+conteoImpares = 0
+
+i = 1
+while i <= n_elementos:
+    num = int(input(f"Digite el número {i}: "))
+
+    if num % 2 == 0:  # Número par
+        sumaPares += num
+        conteoPares += 1
+    else:             # Número impar
+        sumaImpares += num
+        conteoImpares += 1
+
+    i += 1
+
+# Resultados finales
+if conteoPares > 0:
+    print(f"La suma de los números pares es: {sumaPares}")
+    print(f"El conteo de los números pares es: {conteoPares}")
+else:
+    print("No se han digitado números pares")
+
+if conteoImpares > 0:
+    promedio_impares = sumaImpares / conteoImpares
+    print(f"El promedio de los números impares es: {promedio_impares}")
+else:
+    print("No se han digitado números impares")
+"""
+# Ejercicio 7: Calcular salarios de 5 empleados y la sumatoria total...//
+"""suma = 0  # acumulador de salarios
+
+i = 1
+while i <= 5:
+    print(f"Salario del empleado {i}")
+    horas = int(input("Digite las horas trabajadas: "))
+    tarifa = float(input("Digite la tarifa por hora: "))
+
+    salario = horas * tarifa
+    print(f"El salario es: {salario}")
+
+    suma += salario
+    i += 1
+
+print(print(f"La suma de todos los salarios es: {suma}"))
+"""
 
 
