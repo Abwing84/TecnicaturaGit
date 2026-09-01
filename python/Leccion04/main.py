@@ -41,7 +41,7 @@ else:
 # 3.listas: vamos a ver cuantos elementos tiene una lista...//
 print (len(nombres)) # le pasamos como parametro la lista...//
 
-# Agregamos un elemnto en la lista...//
+# Agregamos un elemento en la lista...//
 nombres.append('Marcelo') # agrega el elemento al inicio o final de la lista...//
 print(nombres) # lo hace al final, efecto "cola"...//
 
@@ -161,4 +161,139 @@ tupla = (13, 1, 8, 3, 2, 5, 8)
 # Crear una lista que solo incluya los numeros 5 ...//
 # e imprima por consola [1, 3, 2]
 
+# 2.1 Clase 2 Python: tipo set o conjunto...//
+# Tipo set se utilizan llaves...//
+planetas = {'Martes', 'Júpiter', 'Venus'}; # set o conjunto No mantiene orden no tiene indice...//
+print (len(planetas)) # Usamos la funcion len = length significa largo...//
 
+# Revisar si un elemento existe dentro de set...//
+print('Júpiter' not in planetas) # Esto es una pregunta 'in' or 'not int'...//
+
+# Agregar un elemento...//
+planetas.add('Tierra') # add es una funcion...//
+planetas.add('Tierra')
+planetas.add('Tierra') # No permite agregar elementos duplicados...//
+print(planetas)
+
+# Eliminar elementos, puede arrojar error si el elemento no existe...//
+planetas.remove('Júpiter') # ingresa un error muestra 'key error'
+print(planetas)
+
+planetas.discard('Tierr') # esta funcion al equivocarse no muestra error,
+# solo que no lo elimina...//
+print(planetas)
+
+# Limpiar set...//
+planetas.clear()
+print(planetas)
+
+# Elimina set o conjunto...//
+del planetas
+#print(planetas) # al eliminar nos muestra error...//
+
+# 2.2 Clase 2 Python: Diccionario en Python...//
+# 'Maradona':10 // el conjunto de dos elementos, lo que va entre comillas y despues del punto
+# hace el diccionario y se usa {llñaves}...//
+# dict(key, value)
+diccionario = {
+    'IDE':'Integrated Development Environment',
+    'POO':'Programacion Orientada a Objetos',
+    'SABD':'Sistema de Administracion de Base de Datos'
+}
+# Verificar la cantidad de elementos del diccionario...///
+print(len(diccionario))
+print(diccionario)
+
+# Acceder a un diccionario con la llave (key)...//
+print(diccionario['IDE'])
+
+# Otra forma de recuperar un elemento...//
+print(diccionario.get('POO'))
+print(diccionario.get('SABD'))
+
+# Modificar los elementos...//
+diccionario['IDE'] = 'Entorno de Desarrollo Integrado'# un diccionario puede modificarse...//
+print(diccionario)
+
+# Como recorrer los elementos...//
+for termino in diccionario:
+    print(termino) # solo muestra las llaves...//
+
+# Necesitamos una funcion para recorrer un diccionario...//
+for termino, valor in diccionario.items():
+    print(termino, valor)
+
+# Otras maneras de acceder a un diccionario...//
+for termino in diccionario.keys():
+    print(termino) # Muestra solo las llaves...//
+
+# Usamos una funcion para acceder al valor...//
+for valor in diccionario.values():
+    print(valor)
+
+# Comprobamos la existencia de algun elemento...//
+    print('IDE' in diccionario) # devuelve un booleano...//
+
+# Agregamos un elemento al diccionario...//
+diccionario['PK'] = 'Primary Key'
+print(diccionario)
+
+# Eliminar un elemento del diccionario...//
+diccionario.pop('SABD')
+print(diccionario)
+
+# Vaciar un diccionario...//
+diccionario.clear()
+print(diccionario)
+
+# Eliminar un diccionario...//
+del diccionario # El diccionario se borro...//
+
+# 2.3 Clase 2 Python: Repaso de las listas en Python...//
+# Agregamos un elemento en la lista...//
+nombres.append('Marcelo')
+nombres.append([1, 2, 3])
+nombres.append(True)
+nombres.append(10.45)
+nombres.append([4, 5])
+nombres.append(7)
+print(nombres)
+
+# Concatenar listas...//
+lista1 = [1, 2, 3, 1]
+lista2 = [4, 5, 6, 1]
+lista3 = lista1 + lista2 # concatenamos ...//
+print(lista3)
+
+
+lista3.extend([7, 8, 9, 1]) # Funcion para agregar varios elementos a una lista...//
+print(lista3)
+
+print(lista3.index(5)) # Funcion para ubicar en que indice esta el valor ingresado...//
+# print(lista3.index(0)) # esto daria error porque este elemento no esta en la lista...//
+
+# Como saber cuantos valores repetidos hay dentro de una lista...//
+print(lista3.count(1)) # Cuenta cuantos valores iguales hay dentro de la lista...//
+
+# Para poner al reves una lista...//
+lista3.reverse()
+print(lista3)
+
+# Para que una lista se multiplique repitiendo sus elementos...//
+lista = [1, 2, 3] * 2
+print(lista)
+
+# Metodos de ordenamiento...//
+lista3.sort() # Ordena los elementos en forma ascendente...//
+print(lista3)
+
+lista3.sort(reverse=True) # Ordena en forma descendente...//
+print(lista3)
+
+# 2.4 Clase 2 Python: Repaso y mas concepto de Tuplas en Python...//
+tupla = (4, 'Hola', 6.78, [1, 2, 78], 4, 'Hola') # Puede tener dif tipos de datos...//
+print(tupla)
+
+print(4 not in tupla) # Accion booleana, su respuesta es de tipo booleana...//
+# Por lo que podemos usar dentro de tuplas: index, count, len...//
+# En tuplas se puede convertir de tupla a lista y lista a tuplas...//
