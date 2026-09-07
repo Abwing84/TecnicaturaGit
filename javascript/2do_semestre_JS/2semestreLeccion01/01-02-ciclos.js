@@ -1,4 +1,5 @@
-// Ciclo while. mientras la condición sea verdadera, se ejecuta el bloque de código ...//
+// 2° Semestre: Javascript - Clase 1 - Leccion01...//
+//1.1 Ciclo while. mientras la condición sea verdadera, se ejecuta el bloque de código ...//
 let contador = 0;
 while (contador < 3){
     console.log(contador);
@@ -6,7 +7,7 @@ while (contador < 3){
 }
 console.log("fin del ciclo while");
 
-// Ciclo do while. primero se ejecuta el bloque de código y luego se evalúa la condición...//
+// 1.2 Ciclo do while. primero se ejecuta el bloque de código y luego se evalúa la condición...//
 let conteo = 0;
 do {
     console.log(conteo);
@@ -14,13 +15,13 @@ do {
 }while(conteo < 3);
 console.log("fin del ciclo do while");
 
-// Ciclo for. se ejecuta un bloque de código un número determinado de veces...//
+// 1.3  Ciclo for. se ejecuta un bloque de código un número determinado de veces...//
 for(let contando = 0; contando < 3; contando++){
     console.log(contando);
 }
 console.log("fin del ciclo for");
 
-// Palabra reservada break. se utiliza para salir de un ciclo antes de que termine...//
+// 1.4 Palabra reservada break. se utiliza para salir de un ciclo antes de que termine...//
 for(let contando = 0; contando <= 10; contando++){
     if(contando % 2 == 0){
         console.log(contando); // Muestra todos los pares...//
@@ -29,7 +30,7 @@ for(let contando = 0; contando <= 10; contando++){
 }
 console.log("Termina el ciclo al encontrar los pares");
 
-// Palabra reservada continue. se utiliza para saltar a la siguiente iteración del ciclo...//
+// 1.5 Palabra reservada continue. se utiliza para saltar a la siguiente iteración del ciclo...//
 for(let contando = 0; contando <= 10; contando++){
     if(contando % 2 !== 0){
         continue; // Salta a la siguiente iteración si el número es impar...// 
@@ -38,7 +39,7 @@ for(let contando = 0; contando <= 10; contando++){
 }
 console.log("Termina el ciclo");
 
-// Etiquetas Labels. se utilizan para identificar un ciclo y poder salir de él desde un ciclo anidado...//
+// 1.6 Etiquetas Labels. se utilizan para identificar un ciclo y poder salir de él desde un ciclo anidado...//
 inicio: 
 for(let contando = 0; contando <= 10; contando++){
     if(contando % 2 !== 0){
