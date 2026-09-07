@@ -163,7 +163,7 @@ tupla = (13, 1, 8, 3, 2, 5, 8)
 
 # 2.1 Clase 2 Python: tipo set o conjunto...//
 # Tipo set se utilizan llaves...//
-planetas = {'Martes', 'Júpiter', 'Venus'}; # set o conjunto No mantiene orden no tiene indice...//
+planetas = {'Martes', 'Júpiter', 'Venus'} # set o conjunto No mantiene orden no tiene indice...//
 print (len(planetas)) # Usamos la funcion len = length significa largo...//
 
 # Revisar si un elemento existe dentro de set...//
@@ -297,3 +297,136 @@ print(tupla)
 print(4 not in tupla) # Accion booleana, su respuesta es de tipo booleana...//
 # Por lo que podemos usar dentro de tuplas: index, count, len...//
 # En tuplas se puede convertir de tupla a lista y lista a tuplas...//
+
+# 3.1 Clase 3 python: Repaso del tipo set o conjunto...//
+# para definir un conjunto...//
+conjunto2 = set()
+conjunto1 = {'bye', } # estando vacio con llaves, esta inicializado vacio...//
+conjunto2.add(7)
+conjunto2.add('hola')
+print(conjunto2)
+conjunto1.add('Hola')
+print(conjunto1)
+print(3 not in conjunto1) # Preguntamos si el 3 No esta en el conjunto1...//
+
+# Como hacer la igualdad de dos conjuntos...//
+print(conjunto1 == conjunto2) # Nos devuelve un booleano como respuesta...//
+
+# operaciones de conjuntos...//
+conjunto3 = conjunto1 | conjunto2 # La linea une los dos conjunto...//
+print(conjunto3)
+
+conjunto3 = conjunto1 & conjunto2 # que elemento tienen en comun...//
+print(conjunto3)
+
+conjunto3 = conjunto1 - conjunto2 # Asigna el valor del conjunto 1 y no el conjunto2...//
+print(conjunto3)
+
+conjunto3 = conjunto2 - conjunto1
+print(conjunto3)
+
+conjunto3 = conjunto1 ^ conjunto2 # ^ = alt+94 | elemento que no comparten o son diferentes...//
+print(conjunto3)
+
+conjunto3 = conjunto1 | conjunto2 # Abajo preguntamos si un conjunto esta dentro de otro...//
+print(conjunto2.issubset(conjunto3)) # Porque lo unimos antes, entonces esta funcion te muestra el subconjunto...//
+print(conjunto1.issubset(conjunto3))
+print(conjunto3.issubset(conjunto1))
+print(conjunto3.issubset(conjunto2))
+
+print(conjunto3.issuperset(conjunto1)) # Pregunta si estan todos los elementos del conjunto1 en el 3...//
+print(conjunto3.issuperset(conjunto2)) # CONJUNTO3 ES UN SUPERCONJUNTO TIENJE EL DE 1 Y EL DE 2...//
+print(conjunto2.issuperset(conjunto3))
+
+# Como saber si ambos conjuntos son desconexos, esto es No comparten elementos...//
+print(conjunto1.isdisjoint(conjunto2)) # Pregunta: No hay cosas en comun...//
+
+# Convertir un conjunto totalmente inmutable...//
+conjunto1 = frozenset # Esto hace el conjunto inmutable...//
+# No se puede agregar, modificar y/o eliminar elementos del conjunto...//
+
+# 3.2 clase 3 Python: Repaso de Diccionarios...//
+diccionarioNuevo = {'Azul': 'blue', 'Rojo': 'Red', 'Verde': 'Green', 'Amarillo': 'Yellow'}
+print(diccionarioNuevo)
+
+# Como eliminar...//
+del (diccionarioNuevo['Azul'])
+print(diccionarioNuevo)
+
+# Diccionarios pueden almacenar diferentes tipos de datos...//
+diccionario2 = {'Abel': {'Edad': 42, 'Altura': 1.75}, 'Osvaldo': [45, 1.85], 'Natalia': [35, 1.67]}
+print(diccionario2)
+
+# 3.3 clase 3 Python: Ejercicio con Diccionario y tarea...//
+seleccionArgentina = {
+    10: {'Nombre': 'Lionel Messi', 'Edad': 39, 'Altura': 1.70, 'Precio': '50 Millones', 'Posicion': 'Extremo Derecho'},
+    22: {'Nombre': 'Lautaro Martinez', 'Edad': 29, 'Altura': 1.74, 'Precio': '38 Millones', 'Posicion': 'Centro Delantero'},
+    21: {'Nombre': 'Paulo Dybala', 'Edad': 32, 'Altura': 1.77, 'Precio': '35 Millones', 'Posicion': 'Media punta'},
+     3: {'Nombre': 'Nicolas Tagliafico', 'Edad': 33, 'Altura': 1.72, 'Precio': '25 Millones', 'Posicion': 'Lateral Izquierdo'},
+     6: {'Nombre': 'Lisandro Martinez', 'Edad': 28, 'Altura': 1.76, 'Precio': '30 Millones', 'Posicion': 'Defensor'},
+     5: {'Nombre': 'Leandro Paredes', 'Edad': 32, 'Altura': 1.82, 'Precio': '38 Millones', 'Posicion': 'Mediocampista'},
+     18: {'Nombre': 'Nicolas Paz', 'Edad': 21, 'Altura': 1.86, 'Precio': '27 Millones', 'Posicion': 'Mediocampista'},
+     15: {'Nombre': 'Nicolas Gonzalez', 'Edad': 28, 'Altura': 1.81, 'Precio': '20 Millones', 'Posicion': 'Mediocampista'},
+     1: {'Nombre': 'Emiliano Martinez', 'Edad': 34, 'Altura': 1.95, 'Precio': '32 Millones', 'Posicion': 'Arquero'}
+}
+print(seleccionArgentina.values()) # no se ingresa datos en el parentesis, solo muestra los valores...//
+print(seleccionArgentina[5]) # Busca por llave y muestra los valores...//
+print(seleccionArgentina)
+
+for valor in seleccionArgentina.values(): # llaves tambien pero sin .values()...//
+    print(valor)
+for llave, valor in seleccionArgentina.items():
+    print(llave, valor)
+
+# Tarea: Agregar 4 jugadores al diccionario seleccionArgentina...//
+print('Tenemos cargados en el diccionario la cantidad de:', len(seleccionArgentina), 'jugadores')
+
+# 3.4 clase 3 Python: Metodo con listas llamado PILAS...//
+pila = [1, 2, 3] # Es una lista...//
+
+# Agregamos elementos a la pila por el final...//
+pila.append(4)
+pila.append(5)
+print(pila)
+
+# Sacando elementos por el final...//
+pila.pop() # Saca el ultimo elemento de la la pila,
+print(pila)
+
+elementoBorrado = pila.pop()
+print(f'Sacamos el elemento de la lista: {elementoBorrado}')
+print(f'La lista pila ahora quedo asi: {pila}')
+
+# 3.5 clase 3 Python: Metodo con listas llamado COLAS...//
+# Estructura de datos tipo fifo (first imput / first output)
+cola = ['Abel', 'Mia', 'Cande', 'Betiana']
+
+# Agregamos elementos al final de la cola...//
+cola.append('Natalia')
+cola.append('Italia')
+cola.append('Adri')
+cola.append('Anabel')
+print(cola)
+
+# Sacamos elementos en la cola...// por orden de atencion...//
+seRetira = cola.pop(0)
+print(f'Atendido el cliente: {seRetira}')
+print(cola)
+
+seRetira = cola.pop(0)
+print(f'Atendido el cliente: {seRetira}')
+print(cola)
+
+seRetira = cola.pop(0)
+print(f'Atendido el cliente: {seRetira}')
+print(cola)
+
+seRetira = cola.pop(0)
+print(f'Atendido el cliente: {seRetira}')
+print(cola)
+
+seRetira = cola.pop(0)
+print(f'Atendido el cliente: {seRetira}')
+print(cola)
+
+
