@@ -113,7 +113,7 @@ for i in rango:
 # funciones que usamos: append, insert, remove, pop, clear, del ...//
 
 print()
-
+print()
 # # Colecciones: tuplas...//
 # 1.Tuplas: la tupla tiene ('agsdh',) no puede faltar la comilla y la coma sino lo toma como string...//
 # Definimos una tupla...//
@@ -160,7 +160,7 @@ tupla = (13, 1, 8, 3, 2, 5, 8)
 # Definimos la tupla ...//
 # Crear una lista que solo incluya los numeros 5 ...//
 # e imprima por consola [1, 3, 2]
-
+print()
 # 2.1 Clase 2 Python: tipo set o conjunto...//
 # Tipo set se utilizan llaves...//
 planetas = {'Martes', 'Júpiter', 'Venus'} # set o conjunto No mantiene orden no tiene indice...//
@@ -248,7 +248,7 @@ print(diccionario)
 
 # Eliminar un diccionario...//
 del diccionario # El diccionario se borro...//
-
+print()
 # 2.3 Clase 2 Python: Repaso de las listas en Python...//
 # Agregamos un elemento en la lista...//
 nombres.append('Marcelo')
@@ -289,7 +289,7 @@ print(lista3)
 
 lista3.sort(reverse=True) # Ordena en forma descendente...//
 print(lista3)
-
+print()
 # 2.4 Clase 2 Python: Repaso y mas concepto de Tuplas en Python...//
 tupla = (4, 'Hola', 6.78, [1, 2, 78], 4, 'Hola') # Puede tener dif tipos de datos...//
 print(tupla)
@@ -297,7 +297,7 @@ print(tupla)
 print(4 not in tupla) # Accion booleana, su respuesta es de tipo booleana...//
 # Por lo que podemos usar dentro de tuplas: index, count, len...//
 # En tuplas se puede convertir de tupla a lista y lista a tuplas...//
-
+print()
 # 3.1 Clase 3 python: Repaso del tipo set o conjunto...//
 # para definir un conjunto...//
 conjunto2 = set()
@@ -344,7 +344,7 @@ print(conjunto1.isdisjoint(conjunto2)) # Pregunta: No hay cosas en comun...//
 # Convertir un conjunto totalmente inmutable...//
 conjunto1 = frozenset # Esto hace el conjunto inmutable...//
 # No se puede agregar, modificar y/o eliminar elementos del conjunto...//
-
+print()
 # 3.2 clase 3 Python: Repaso de Diccionarios...//
 diccionarioNuevo = {'Azul': 'blue', 'Rojo': 'Red', 'Verde': 'Green', 'Amarillo': 'Yellow'}
 print(diccionarioNuevo)
@@ -356,7 +356,7 @@ print(diccionarioNuevo)
 # Diccionarios pueden almacenar diferentes tipos de datos...//
 diccionario2 = {'Abel': {'Edad': 42, 'Altura': 1.75}, 'Osvaldo': [45, 1.85], 'Natalia': [35, 1.67]}
 print(diccionario2)
-
+print()
 # 3.3 clase 3 Python: Ejercicio con Diccionario y tarea...//
 seleccionArgentina = {
     10: {'Nombre': 'Lionel Messi', 'Edad': 39, 'Altura': 1.70, 'Precio': '50 Millones', 'Posicion': 'Extremo Derecho'},
@@ -380,7 +380,7 @@ for llave, valor in seleccionArgentina.items():
 
 # Tarea: Agregar 4 jugadores al diccionario seleccionArgentina...//
 print('Tenemos cargados en el diccionario la cantidad de:', len(seleccionArgentina), 'jugadores')
-
+print()
 # 3.4 clase 3 Python: Metodo con listas llamado PILAS...//
 pila = [1, 2, 3] # Es una lista...//
 
@@ -396,7 +396,7 @@ print(pila)
 elementoBorrado = pila.pop()
 print(f'Sacamos el elemento de la lista: {elementoBorrado}')
 print(f'La lista pila ahora quedo asi: {pila}')
-
+print()
 # 3.5 clase 3 Python: Metodo con listas llamado COLAS...//
 # Estructura de datos tipo fifo (first imput / first output)
 cola = ['Abel', 'Mia', 'Cande', 'Betiana']
@@ -428,5 +428,12 @@ print(cola)
 seRetira = cola.pop(0)
 print(f'Atendido el cliente: {seRetira}')
 print(cola)
+print()
+
+# 4.5 clase 4 Python: Colecciones: Recorremos el Diccionario seleccionArgentina...//
+# Seguimos mostrando como recorrer un diccionario...//
+for i in seleccionArgentina:
+    print(f'{i} -> {seleccionArgentina[i]}')
+
 
 
