@@ -2,7 +2,7 @@
  
  */
 package Clases;
-
+        // Clase 4.2 Creacion de un Objeto...//
 public class PruebaPersona { // PascalCase...//
     public static void main(String[] args) {// Variable: persona1 que es persona(1)...//
         Persona persona1;//Persona persona1 = new Persona(); //se puede poner en - lineas...//
