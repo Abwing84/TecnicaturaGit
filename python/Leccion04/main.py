@@ -434,6 +434,3 @@ print()
 # Seguimos mostrando como recorrer un diccionario...//
 for i in seleccionArgentina:
     print(f'{i} -> {seleccionArgentina[i]}')
-
-
-
