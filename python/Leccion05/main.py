@@ -1,4 +1,4 @@
-# Leccion05 : Vi que el profe comiteo por eso es asi: leccion 05...//
+# Leccion05 : Clase 5: Vi que el profe comiteo por eso es asi: leccion 05...//
 # 6.3 clase 5 Python: List Unpacking: Desempaquetado de listas
 # Desempaquetado de listas o list Unpacking
 def show(name, lastName):
@@ -65,3 +65,37 @@ def listarNombres(*nombres): # Normalmente se utiliza: *args...//
 listarNombres('Omar', 'Mariano', 'Sebastian', 'Maxi', 'Cristian')
 listarNombres('Mia', 'Adriana', 'Candela', 'Italia', 'Mariano')
 # No se pueden modificar por eso se van agregando(tuplas)...//
+
+# Clase 5 Funciones Recursivas. parte 3 solucion...//
+# 7.2 Argumentos variables para un diccionario...//
+def listarTerminos(**terminos): # Lo mas utilizado es *kwargs para recibir los argumentos...//
+    for llave, valor in terminos.items(): # kwargs: key word argument...//
+        print(f'{llave}:{valor}')
+
+
+listarTerminos() # No recibe nada, nada se va a mostrar...//
+listarTerminos(IDE = 'Integrated Development Environment', PK = 'Primary Key')
+listarTerminos(nombre = 'Lionel Messi')
+
+# 7.3 Lista de elementos con funciones (convertir)...//
+def desplegarNombres(nombres):
+    for nombre in nombres:
+        print(nombre)
+nombres2 = ['Tito', 'Toto', 'Tati']
+desplegarNombres(nombres2)
+# desplegarNombres(10, 11) No es un objeto iterable...//
+desplegarNombres((10, 11)) # La convertimos a una tupla, en un solo elemento no olvide la coma...//
+desplegarNombres([22, 55]) # La convertimos a una listra...//
+
+# 7.4 Funciones recursivas con factorial (hacer la tarea)...//
+# Funciones Recursivas...//
+def factorial(numero):
+    if numero == 1: # Caso Base...//
+        return 1
+    else:
+        return numero * factorial(numero - 1) # Caso Recursivo...//
+
+numeroFactorial = int(input('Digite el numero para calcular el factorial: '))
+resultado = factorial(numeroFactorial) # Lo hacemos en codigo duro...//
+print(f'el resultado del numero factorial es: {resultado}')
+# Tarea que el usuario ingrese el numero para calcular el factorial...//
