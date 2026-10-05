@@ -1,0 +1,21 @@
+┌──────────────────────────┐
+│      class_Persona       │
+├──────────────────────────┤
+│ - nombre: String         │
+│ - apellido: String       │
+│ - edad: int              │
+├──────────────────────────┤
+│ + __init__(...)          │
+│ + saludar()              │
+└────────────┬─────────────┘
+             │
+       ┌─────┴─────┐
+       ▼           ▼
+┌─────────────┐ ┌─────────────┐
+│ persona1    │ │ persona2    │
+│ : Persona   │ │ : Persona   │
+├─────────────┤ ├─────────────┤
+│ nombre Maxi │ │ nombre Lucas│
+│ apellido Roj│ │ apellido Gar│
+│ edad  39    │ │ edad  39    │
+└─────────────┘ └─────────────┘

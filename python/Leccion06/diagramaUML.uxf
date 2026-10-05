@@ -1,0 +1,35 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes
+
+instance </help_text><element><id>UMLGeneric</id><coordinates><x>450</x><y>70</y><w>300</w><h>130</h></coordinates><panel_attributes>Persona
+--
+- nombre: str
+- apellido: str
+- edad: int
+--
++ mostrar_detalle()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>740</x><y>340</y><w>320</w><h>80</h></coordinates><panel_attributes>persona2: Persona
+--
+nombre = "Liliana"
+apellido = "Luciani"
+edad = 40</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1510</x><y>130</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;&lt;Stereotype&gt;&gt;
+Package::FatClass
+{Some Properties}
+--
+-id: Long
+_-ClassAttribute: Long_
+--
+#Operation(i: int): int
+/+AbstractOperation()/
+--
+Responsibilities
+-- Resp1
+*-- Resp2*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>590</x><y>190</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>890</x><y>270</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>270</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>590</x><y>260</y><w>330</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;</panel_attributes><additional_attributes>10;20;310;20</additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>260</y><w>320</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;</panel_attributes><additional_attributes>300;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>170</x><y>340</y><w>300</w><h>80</h></coordinates><panel_attributes>persona1: Persona
+--
+nombre = "Maxi"
+apellido = "Rojas"
+edad = 39</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>170</x><y>340</y><w>300</w><h>80</h></coordinates><panel_attributes>persona1: Persona
+--
+nombre = "Maxi"
+apellido = "Rojas"
+edad = 39</panel_attributes><additional_attributes></additional_attributes></element></diagram>
