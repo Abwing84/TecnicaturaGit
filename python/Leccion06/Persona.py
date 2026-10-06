@@ -11,6 +11,7 @@ class Persona: # Creamos una clase...//
         self.edad = edad
     def mostrar_detalle(self): # 8.8 Métodos de instancia: Definimos un método...//
         print(f'Persona: {self.nombre} {self.apellido} su edad es {self.edad} años') # 8.8
+# Self seria igual a this....///
 
 
 # la referencia en init es indirecta...//
@@ -59,8 +60,22 @@ print(f'El objeto 2 modificado de la clase persona: {persona2.nombre} {persona2.
 # Se crean diagramas con ello, en VScode crear en carpeta de py diagrama .uxf...//
 
 # 8.8 Métodos de instancia: Definimos un método...//
-persona1.mostrar_detalle()
+persona1.mostrar_detalle() # la referencia se pasa de forma automatica...//
 persona2.mostrar_detalle()
+
+# Clase 7: POO parte 2,c/tarea...//
+# 9.1 Palabra reservada self y atributos de instancia...//
+
+# Persona.mostrar_detalle(persona1) Debemos pasarle una referencia para elñ self o da error
+
+# 9.2 Crear atributos desde un objeto...//
+persona2.telefono = '2622458458'
+print(f'Este es el telefono de: {persona2.nombre} {persona2.telefono}') # Hemos creado el atributo de un objerto...//
+
+# print(persona1.telefono) el objeto persona1 no tiene este atributo, da error...//
+
+
+
 
 
 
