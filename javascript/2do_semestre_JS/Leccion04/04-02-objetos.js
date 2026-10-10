@@ -8,10 +8,21 @@ let persona = {
     nombre: 'Carlos',
     apellido: 'Gil',
     email: 'cgil@gmail.com',
-    edad: 30,
+    edad: 32,
+    idioma: 'es', //  El idioma se maneja en MAYUS...//
+    get lang(){
+        return this.idioma.toUpperCase();// Convierte las minus a mayus...//
+    },
+    set lang(lang){
+        this.idioma = lang.toUpperCase;
+    },
     nombreCompleto: function(){ // 1.2 - Metodo o function en javascript
         return this.nombre+' '+this.apellido;
-    } // this..... apunta a los atributos o metodos del objeto...//
+    } ,// this..... apunta a los atributos o metodos del objeto...//
+    get nombreEdad(){ //5.1 Métodos get y set Parte 1 y 2
+        return 'El nombre es: 'this.nombre+', Edad: '+this.edad;
+    }
+    
 }
 
 console.log(persona.nombre);
@@ -144,3 +155,35 @@ console.log(personaNueva.edad);
 // personaJSON es un texto (string), no un objeto.
 // Después de JSON.parse(), personaNueva vuelve a ser un objeto.
 ```
+// Clase 5. Objetos parte 1... lo agrgo dentro del objeto en la linea 15...//
+// 5.1 Métodos get y set Parte 1
+console.log('Comenzamos a utilizar el Metodo get');
+console.log(persona.nombreEdad);
+// Parte 1 ..//
+console.log('Comenzamos con el metodo get y set para idiomas');
+persona.lang = 'en';
+console.log(persona.lang); 
+
+// 5.2 Constructores de objetos
+function Persona3(nombre, apellido, email){// Constructor...//
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.email = email;
+}
+let padre = new Persona3('Leo', 'Lopez', 'lopezl@gmail.com');
+padre.nombre = 'Luis';// Se puede modificar o preasignar en el constructor...//
+console.log(padre);
+// Creamos otro objeto...//
+let madre = new Persona3('Laura', 'Contrera', 'contreral@gmail.com');
+console.log(madre);
+// la palabra reservada new nos esta asignando un espacio diferente de memoria
+// cuando se modifica se afecta solo ese espacio nuevo que se creo y no altera 
+// el resto...//
+
+
+
+
+
+
+
+
