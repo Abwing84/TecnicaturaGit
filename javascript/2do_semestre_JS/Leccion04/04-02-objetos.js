@@ -20,9 +20,8 @@ let persona = {
         return this.nombre+' '+this.apellido;
     } ,// this..... apunta a los atributos o metodos del objeto...//
     get nombreEdad(){ //5.1 Métodos get y set Parte 1 y 2
-        return 'El nombre es: 'this.nombre+', Edad: '+this.edad;
-    }
-    
+        return 'El nombre es: '+this.nombre+', Edad: '+this.edad;
+    }  
 }
 
 console.log(persona.nombre);
@@ -83,95 +82,28 @@ console.log(personaString);
 // se adecua al manejo de objetos en JavaScript y es muy utilizado en la actualidad...//
 
 //1.8 Investigamos JSON con chatGPT y vemos el uso de stringify y parse...//
-```javascript
-// JSON significa JavaScript Object Notation
-// Es un formato de texto que se usa para guardar y transmitir datos
-// especialmente entre un programa y otro, por ejemplo entre una aplicación y una API.
-
-// Objeto JavaScript
-let persona = {
-    nombre: "Carlos",
-    apellido: "Gil",
-    edad: 30
-};
-
-// En JSON las claves van entre comillas dobles
-// Ejemplo:
-// {
-//     "nombre": "Carlos",
-//     "apellido": "Gil",
-//     "edad": 30
-// }
-
-// En JavaScript también podemos escribir:
-// nombre: "Carlos"
-
-// Objeto JavaScript → lo usamos dentro del programa
-// JSON → sirve principalmente para intercambiar datos entre programas
-
-// Ejemplo de datos que podría enviar un servidor:
-// {
-//     "nombre": "Abel",
-//     "edad": 42
-// }
-
-// JSON no es solamente para JavaScript
-// Python, Java, PHP, C#, etc. también pueden leer y generar JSON.
-
-// JSON.stringify()
-// Convierte un objeto de JavaScript en texto JSON
-let personaJSON = JSON.stringify(persona);
-
-// Muestra el texto JSON
-console.log(personaJSON);
-
-// Resultado:
-// {"nombre":"Carlos","apellido":"Gil","edad":30}
-
-// OBJETO → JSON (texto)
-
-// JSON.parse()
-// Convierte texto JSON en un objeto JavaScript
-let personaNueva = JSON.parse(personaJSON);
-
-// Accedemos nuevamente a las propiedades del objeto
-console.log(personaNueva.nombre);
-console.log(personaNueva.apellido);
-console.log(personaNueva.edad);
-
-// Resultado:
-// Carlos
-// Gil
-// 30
-
-// JSON.stringify() → objeto → texto JSON
-// JSON.parse() → texto JSON → objeto
-
-// Forma fácil de recordarlo:
-// stringify = convertir a string (texto)
-// parse = interpretar ese texto y convertirlo nuevamente en objeto
-
-// Importante:
-// personaJSON es un texto (string), no un objeto.
-// Después de JSON.parse(), personaNueva vuelve a ser un objeto.
-```
+//
 // Clase 5. Objetos parte 1... lo agrgo dentro del objeto en la linea 15...//
 // 5.1 Métodos get y set Parte 1
 console.log('Comenzamos a utilizar el Metodo get');
 console.log(persona.nombreEdad);
 // Parte 1 ..//
 console.log('Comenzamos con el metodo get y set para idiomas');
-persona.lang = 'en';
-console.log(persona.lang); 
+persona.lang = 'EN';
+console.log(persona.idioma); // Devuelve el idioma en mayusculas...//
 
 // 5.2 Constructores de objetos
 function Persona3(nombre, apellido, email){// Constructor...//
     this.nombre = nombre;
     this.apellido = apellido;
     this.email = email;
+    this.nombreCompleto = function(){ // Metodo dentro del constructor...//
+        return this.nombre+' '+this.apellido;
+    }
 }
 let padre = new Persona3('Leo', 'Lopez', 'lopezl@gmail.com');
 padre.nombre = 'Luis';// Se puede modificar o preasignar en el constructor...//
+padre.telefono = '5492622469452';// Se puede agregar un nuevo atributo al objeto...//5.5 El uso de prototype...
 console.log(padre);
 // Creamos otro objeto...//
 let madre = new Persona3('Laura', 'Contrera', 'contreral@gmail.com');
@@ -180,10 +112,71 @@ console.log(madre);
 // cuando se modifica se afecta solo ese espacio nuevo que se creo y no altera 
 // el resto...//
 
+// 5.3 Agregar métodos al constructor del objeto...// en linea 100!
+console.log(padre.nombreCompleto());
+console.log(madre.telefono); // 5.5 El uso de prototype...//
+console.log(madre.nombreCompleto()); 
 
+// 5.4 Distintas formas de crear objetos...//
+// Diferentes formas de crear Objetos...//
+// Caso 1...
+let miObjeto = new Object(); // 1. Forma formal de crear un objeto...//
+// Caso 2...
+let miObjeto2 = {}; // 2. Forma literal de crear un objeto...// 
 
+// Caso String 1...
+let miCadena1 = new String('Hola'); // 1. Forma formal de crear un objeto...//
+// Caso String 2...
+let miCadena2 = 'Hola'; // 2. Forma literal de crear un objeto...//
 
+// Caso con numeros 1...
+let miNumero = new Number(1); // 1. Forma formal, NO RECOMENDADA...//
+// Caso con numeros 2...
+let miNumero2 = 1; // 2. Forma literal, SINTAXIS RECOMENDADA...//
 
+// Caso con booleanos 1...
+let miBoolean = new Boolean(false); // 1. Forma formal de crear un objeto...//
+// Caso con booleanos 2...
+let miBoolean2 = false; // 2. Forma literal, SINTAXIS RECOMENDADA...//
 
+// Caso con Arreglos 1...
+let miArreglo = new Array(); // 1. Forma formal de crear un objeto...//
+// Caso con Arreglos 2...
+let miArreglo2 = []; // 2. Forma literal, SINTAXIS RECOMENDADA...//
 
+// Caso con Funciones 1...
+let miFuncion = new Function(); // 1. Forma formal, Todo despues de new es 
+// considerado objeto...//
 
+// Caso con Funciones 2...
+let miFuncion2 = function(){}; // 2. Forma literal, Notacion simplificada
+// SINTAXIS RECOMENDADA...//
+
+// 5.5 Uso de prototype...//
+Persona3.prototype.telefono = '5492622469452'; // Agregamos un nuevo atributo al objeto...//
+console.log(padre.telefono); // 5.5 El uso de prototype...//
+console.log(madre.telefono); // 5.5 El uso de prototype...//
+madre.telefono = '5492622578806'; // Se puede modificar o preasignar en el constructor...//
+console.log(madre.telefono); // 5.5 El uso de prototype...//
+
+// 5.6 El uso de call... pasa los argumentos//
+let persona4 = {
+    nombre: 'Juan',
+    apellido: 'Perez',
+    nombreCompleto2: function(titulo, telefono){
+        return titulo+': '+this.nombre+' '+this.apellido+', '+telefono;
+        //return this.nombre+' '+this.apellido;// 5.7 Uso de Apply...
+    }
+}
+
+let persona5 = {
+    nombre: 'Carlos',
+    apellido: 'Lara'
+}
+
+console.log(persona4.nombreCompleto2('Licenciado', '5492622469452')); 
+console.log(persona4.nombreCompleto2.call(persona5, 'Ingeniero', '5492622578806'));
+
+// 5.7 Uso de Apply..pasa un arreglo...//
+let arreglo = ['Ingeniero', '5492622868686'];// Creamos el arreglo con dos elementos...//
+console.log(persona4.nombreCompleto2.apply(persona5, arreglo));
