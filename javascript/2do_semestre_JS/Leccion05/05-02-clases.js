@@ -3,9 +3,26 @@
 //let persona3 = new Persona('Carla', 'Ponce');
 // No se puede crear alsar la clase para crear el objeto,
 class Persona{// Clase padre...//6.4 Herencia: Parte 1 y 2
+
+    static contadorPersona = 0;// 8.2 Atributos estáticos...//
+    //email = 'Valor default email';// 8.3 Atributos No estáticos...//
+    static get MAX_OBJ(){// 8.5 ESTE METODO SIMULA UNA CONSTANTE...//
+        return 5;// Cantidad limite de creacion de objetos...//
+    }
+
     constructor(nombre, apellido){
         this._nombre = nombre;
         this._apellido = apellido;
+        if(Persona.contadorPersona < Persona.MAX_OBJ){// 8.5
+            this.idPersona = ++Persona.contadorPersona;
+        }
+        else{// 8.5
+            console.log('Se ha superado el maximo de objetos permitidos');
+        }
+        // 8.2 Atributos estáticos
+        // Se pone el nombre de la clase para acceder al atributo static
+        //this.idPersona = ++Persona.contadorPersona;// 8.4 Uso de la palabra static
+        //console.log('Se incrementa contador: '+Persona.contadorObjetosPersona);
     }
 // 6.2 Método Get y Set:
 
@@ -26,7 +43,7 @@ class Persona{// Clase padre...//6.4 Herencia: Parte 1 y 2
     }
 
     nombreCompleto(){//7.1 Heredar
-        return this._nombre+' '+this._apellido;
+        return this.idPersona+' '+this._nombre+' '+this._apellido;// 8.4 Uso de la palabra static
     }
     // 7.3 Clase Object, toString, sobreeescribiendo el 
     // metodo de la clase padre object
@@ -35,6 +52,14 @@ class Persona{// Clase padre...//6.4 Herencia: Parte 1 y 2
         // Dependiendo si es una referencia de tipo padre o de tipo hija, 
         // se ejecutara el metodo de la clase padre o de la clase hija...//
         return  this.nombreCompleto();
+    }
+
+    static saludar(){// 8.1 Palabra static
+        console.log('Saludos desde el metodo static');
+    }
+
+    static saludar2(persona){// 8.1 Palabra static
+        console.log(persona.nombre+' '+persona.apellido);
     }
 }
 // 6.4 Herencia: Parte 1 y 2
@@ -122,3 +147,54 @@ console.log(empleado1.toString());
 // adicional llamado departamento...//
 console.log(persona1.toString());
 // ver lineas superiores linea 30 aprox. ...//
+
+// Clase 7-B: Static... y metodos estaticos...//
+// 8.1 Palabra static con métodos: Parte 1 y 2
+//persona1.saludar(); // No se puede llamar a un metodo static desde un objeto,
+// porque el metodo static pertenece a la clase y no a los objetos de la clase...//
+
+Persona.saludar(); // Se puede llamar a un metodo static desde la clase, porque 
+// el metodo static pertenece a la clase y no a los objetos de la clase...//   
+Persona.saludar2(persona1); 
+// Metodo estatico: No se púede ver en la visualizacion previa, Solo se puede 
+// ver la salida desde la consola o el metodo static...//
+//funciona de forma diferente, lo podemos hacer de la clase y no de los objetos...//
+//parte 2 en linea 42 concatena persona.apellido...//
+Empleado.saludar();
+Empleado.saludar2(empleado1);
+
+// 8.2 Atributos estáticos
+// desde linea 6 7 8
+//console.log(persona1.contadorObjetosPersona); // undefined, porque el atributo
+console.log(Persona.contadorObjetosPersona); // 0, porque el atributo static 
+// pertenece a la clase y no a los objetos de la clase...//
+console.log(Empleado.contadorObjetosPersona); 
+// Las clases hijas heredan los atributos static de la clase padre, por lo tanto
+// se puede acceder al atributo static desde la clase hija...//
+
+// 8.3 Atributos estáticos vs No estáticos...//
+console.log(persona1.email); // Valor default email, porque el atributo email
+console.log(empleado1.email); // Valor default email, porque el atributo email
+//console.log(Persona.email); // undefined, porque el atributo email NO es static y pertenece a los objetos...//
+
+// 8.4 Uso de la palabra static: Parte 1 y 2
+console.log(persona1.toString());
+console.log(persona2.toString());
+console.log(empleado1.toString());
+console.log(Persona.contadorPersona);
+
+let persona3 = new Persona('Carla', 'Pertosi');
+console.log(persona3.toString());
+console.log(Persona.contadorPersona);
+
+// 8.5 Creación de constantes estáticas...//
+// Que pasa si quiero agregar una variable Estatica No modificable...//
+console.log(Persona.MAX_OBJ);
+//Persona.MAX_OBJ = 10; // No se puede modificar ni alterar...
+console.log(Persona.MAX_OBJ);
+let persona4 = new Persona('Franco', 'Colapinto');
+console.log(persona4.toString());
+
+let persona5 = new Persona('Sasha', 'Podka');
+console.log(persona5.toString());
+// No se pueden agregar mas objetos ...//
