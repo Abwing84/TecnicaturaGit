@@ -8,13 +8,15 @@ class Persona{// Clase padre...//6.4 Herencia: Parte 1 y 2
         this._apellido = apellido;
     }
 // 6.2 Método Get y Set:
+
     get nombre(){
         return this._nombre;
-    }
-    
+    }  
+
     set nombre(nombre){
         this._nombre = nombre;
     }
+
     get apellido(){// Tarea de video...//
         return this._apellido;
     }
@@ -22,9 +24,10 @@ class Persona{// Clase padre...//6.4 Herencia: Parte 1 y 2
     set apellido(apellido){// Tarea de video...//
         this._apellido = apellido;
     }
+
 }
 // 6.4 Herencia: Parte 1 y 2
-class Empleado extends Persona(){// Clase hija...
+class Empleado extends Persona{// Clase hija...
     constructor(nombre, apellido, departamento){
         super(nombre, apellido);
         this._departamento = departamento;
@@ -37,12 +40,13 @@ class Empleado extends Persona(){// Clase hija...
     set departamento(departamento){
         this._departamento = departamento;
     }
+
 }
 // Creamos dos objetos...
 let persona1 = new Persona('Martin', 'Diaz');
 console.log(persona1.nombre);
 persona1.nombre = 'Juan Carlos';
-perosona1.apellido = 'Araoz';// Tarea de video...//
+persona1.apellido = 'Araoz';// Tarea de video...//
 console.log(persona1.nombre);
 console.log(persona1.apellido);// Tarea de video...//
 //console.log(persona1);
