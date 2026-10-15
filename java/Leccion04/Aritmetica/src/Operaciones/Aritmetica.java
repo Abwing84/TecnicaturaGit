@@ -7,6 +7,17 @@ public class Aritmetica {
     int a;
     int b;
     
+    // Constructor es un metodo especial...// 6.1 Sobrecarga de métodos
+    public Aritmetica(){// Constructor 1 VACIO...//
+        System.out.println("Se esta ejecutando el constructor N°1");  
+    }
+    // Estamos viendo lo que se llama sobrecarga de constructores...//
+    public Aritmetica(int a, int b){// Constructor 2...//
+        this.a = a;
+        this.b = b;
+        System.out.println("Se esta ejecutando el constructor N°2");
+    }
+            
     // Metodo...//
     public void sumarNumeros(){// Este metodo no retorna nada...//
         int resultado = a + b;
@@ -32,4 +43,12 @@ public class Aritmetica {
 // Agregue el this. en el metodo de arriba...//
     }
 }
- 
+
+// Clase 6 Programación Orientada a Objetos Parte 4 Solución
+// 6.1 Sobrecarga de métodos
+ // Constructor es un metodo especial...//
+    //1.construye un objeto
+    //2.reserva un espacio de memoria
+    //3.inicializa los atributos de la clase
+
+// 6.3 Engineer Java: Memoria stack y heap, tratamiento de residuos...//
