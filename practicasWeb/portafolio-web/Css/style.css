@@ -1,0 +1,120 @@
+
+/* Encabezado */ 
+header { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    padding: 30px 20px; 
+    box-sizing: border-box; 
+    width: 100%; 
+} 
+    
+/* Título del header */ 
+    .titulo { 
+    color: rgb(225, 243, 122); 
+    text-align: center; 
+    font-size: 30px; 
+    margin-top: 0; 
+}
+/* Foto de perfil */ 
+.foto-perfil { 
+    width: 180px; 
+    height: 180px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+    border: 3px solid #182901; 
+    display: block; 
+    margin: 0 auto 25px; }
+body{
+    background-color: rgb(141, 161, 110);
+    color: rgb(73, 75, 14);
+    font-family: 'segoe', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Barra de navegacion */
+.navigation{
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+    justify-content: flex-end;
+    margin: 0 3rem;
+}
+/* Enlaces de la barra de navegacion configurados como si fueran botones */
+.navigation li{
+    font-size: 1rem;
+    width: 100px;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background: #807f7f1a;
+    box-shadow: 0 0 0.5rem rgba(225, 243, 122);
+}
+
+/* Estilo de los enlaces de la barra de navegacion */
+a{ 
+    text-decoration: none; /* Elimina elñ subrayado */
+    color: rgb(225, 243, 122);
+     /* Establece el color del texto de los enlaces a negro */
+}
+
+.sobre-mi{
+    display: flex;
+    justify-content: center; /* Esto centra el elemento */
+}
+
+.container-sobre-mi{
+    display: flex;
+    width: 50%; /* Ancho */
+    padding: 1rem;
+    margin-top: 1rem; /* margen a lo alto */
+    line-height: 2.5rem; /* Espacio entre los parrafos */
+    font-size:  large; /* Tamaño de la fuente */
+    color: rgb(225, 243, 122);
+    text-align: justify;
+}
+
+/* Media Queries agrupadas */
+
+/* Celular (pantallas pequeñas, hasta 767px) */
+@media (max-width: 767px) {
+    .titulo {
+        justify-content: center;
+
+    }
+    .navigation {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+    .container-sobre-mi {
+        width: 100%;
+        padding: 1rem;
+        margin-top: 1rem; /* Margen del alto */
+        line-height: 2.5rem; /* Espacio entre los parrafos del texto */
+        font-size: small; /* Tamaño de la fuente */
+    }
+}
+
+/* Tablets (pantalla medianas, entre 768px y 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .titulo {
+        justify-content: center;
+    }
+    .navigation {
+        gap: 2rem;
+        justify-content: center;
+    }
+}
+
+/* Escritorios(pantallas anchas, 1024px y superiores */ 
+@media (min-width: 1024px) {
+    .titulo {
+        justify-content: flex-start;
+    }
+    .navigation {
+        gap: 3rem;
+        justify-content: flex-end;
+        margin: 0 3rem;
+    }
+}

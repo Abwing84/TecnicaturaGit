@@ -1,21 +1,48 @@
+<!--Es de buenas practicas comenzar a estructrar nuestros archivos ordenando la 
+estructura para el desarrollo enn este caso de el portafolio web, por lo tanto 
+esta estructura puede variar segun nuestro proyecto.
+-->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <!-- Especifica el idioma del contenido del documento -->
+    <meta http-equiv="content-language" content="es">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Web</title> 
-    <link rel="stylesheet" href="./style.css">  
+
+    <!-- Agregamos dos etiquetas meta para el SEO de la clase anterior mas otra 
+    etiqueta meta la del autor -->
+    <meta name="description" content="Nombre del grupo o alumno, creado por nombre del grupo especializado en [Programacion]">
+    <meta name="keywords" content="portafolio, desarrollador web, [Programador], proyectos, contactos">
+    <meta name="autor" content="Abel Astudillo">
+    <title>Portafolio Web</title>
+    <link rel="stylesheet" href="./Css/style.css">  
 </head>
 <body>
     <header> 
-        <h1>ABEL ASTUDILLO - Técnico en Programación</h1>
-        <img src="imageSelf.jpg" alt="explicar que vemos en la imagen: foto de mi perfil">
-        <nav>              
+        <h1 class="titulo">ABEL ASTUDILLO</h1>
+        <img class="foto-perfil" src="./imageSelf.jpg" alt="Foto de perfil de Abel Astudillo">
+        <nav>
+            <!-- Agregue nuevos enlaces para nuestro portafolio web -->              
             <ul class="navigation"> 
                 <li><a href="#sobre mi">SOBRE MI</a></li>
+                <li><a href="#experiencias">EXPERIENCIAS</a></li>
+                <li><a href="#estudios">ESTUDIOS</a></li>
                 <li><a href="#proyectos">PROYECTOS</a></li>
+                <li><a href="#contacto">CONTACTO</a></li>
             </ul>
         </nav>
     </header>
+    <main>
+        <section class="sobre-mi">
+            <article class="container-sobre-mi">
+                <h2>
+                    Soy estudiante de primer año en la<b> Tecnicatura Universitaria en Programacion, de la Universidad Tecnologica Nacional - FRSR, Argentina</b>.
+                    Me impulsan los grandes desafíos, el aprendizaje constante y la creación de soluciones reales. No me conformo con entender la tecnología: quiero dominarla, desafiar mis límites y transformar ideas en proyectos a través del código.
+                </h2>
+            </article>
+        </section>
+    </main>
+
 </body>
 </html>
