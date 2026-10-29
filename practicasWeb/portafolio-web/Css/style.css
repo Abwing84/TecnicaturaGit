@@ -1,4 +1,27 @@
 
+/* Definiendo variables de color CSS */
+:root{
+    --body-bg-color: rgb(7, 7, 15);
+    --text-color: rgb(214, 210, 210);
+    --colorh1-color: rgb(182, 177, 177);
+}
+/* Aplicando variable creada en el root al boy de nuestra Web */
+/* Reemplace el body con el uso de varibles css */
+body {
+    background: var(--body-bg-color);
+    color: var(--colorh1-color);
+    font-family: 'Sergoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h2{
+    color: var(--colorh1-color)
+}
+/* body{
+    background-color: rgb(141, 161, 110);
+    color: rgb(73, 75, 14);
+    font-family: 'segoe', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} */
+
 /* Encabezado */ 
 header { 
     display: flex; 
@@ -12,25 +35,21 @@ header {
     
 /* Título del header */ 
     .titulo { 
-    color: rgb(225, 243, 122); 
+    color: rgb(115, 116, 115); 
     text-align: center; 
     font-size: 30px; 
     margin-top: 0; 
 }
 /* Foto de perfil */ 
 .foto-perfil { 
-    width: 180px; 
-    height: 180px; 
+    width: 250px; 
+    height: 250px; 
     object-fit: cover; 
-    border-radius: 50%; 
-    border: 3px solid #182901; 
+    border-radius: 0%; 
+    border: 3px solid #5d5a63; 
     display: block; 
     margin: 0 auto 25px; }
-body{
-    background-color: rgb(141, 161, 110);
-    color: rgb(73, 75, 14);
-    font-family: 'segoe', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+
 
 /* Barra de navegacion */
 .navigation{
@@ -47,14 +66,14 @@ body{
     text-align: center;
     padding: 0.5rem;
     border-radius: 0.5rem;
-    background: #807f7f1a;
-    box-shadow: 0 0 0.5rem rgba(225, 243, 122);
+    background: #d8d3d31a;
+    box-shadow: 0 0 0.5rem rgb(183, 185, 173);
 }
 
 /* Estilo de los enlaces de la barra de navegacion */
 a{ 
     text-decoration: none; /* Elimina elñ subrayado */
-    color: rgb(225, 243, 122);
+    color: rgb(211, 212, 201);
      /* Establece el color del texto de los enlaces a negro */
 }
 
@@ -66,12 +85,33 @@ a{
 .container-sobre-mi{
     display: flex;
     width: 50%; /* Ancho */
-    padding: 1rem;
-    margin-top: 1rem; /* margen a lo alto */
+    padding: 5rem;
+    margin-top: 5rem; /* margen a lo alto */
     line-height: 2.5rem; /* Espacio entre los parrafos */
     font-size:  large; /* Tamaño de la fuente */
-    color: rgb(225, 243, 122);
-    text-align: justify;
+    color: rgb(151, 156, 156);
+    gap: 5rem;
+    align-items: flex-start;
+    justify-content: center;
+}
+.foto-perfil{
+    border-radius: 50%;
+}
+
+.experiencias, .estudios{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    color: azure;
+}
+
+.container-experiencias, .container-estudios{
+    width: 100%;
+    padding: 2rem;
+    margin-top: 5rem;
+    line-height: 2.5rem;
+    font-size: large;
+    margin: 8rem;
 }
 
 /* Media Queries agrupadas */
@@ -89,10 +129,22 @@ a{
     }
     .container-sobre-mi {
         width: 100%;
+        box-sizing: border-box;
         padding: 1rem;
         margin-top: 1rem; /* Margen del alto */
-        line-height: 2.5rem; /* Espacio entre los parrafos del texto */
+        line-height: 1.6rem; /* Espacio entre los parrafos del texto */
         font-size: small; /* Tamaño de la fuente */
+        flex-direction: column;
+    }
+    /* Agregando el responsivo de las secciones experiencias y estudios */
+    .container-experiencias, .container-estudios{
+        width: 100%;
+        margin: 0rem;
+    }.experiencias, .estudios{
+        width: 100%;
+        padding: 1rem;
+        margin-top: 1rem;
+        font-size: small;
     }
 }
 
@@ -104,6 +156,10 @@ a{
     .navigation {
         gap: 2rem;
         justify-content: center;
+    }
+    /* Agregando el responsivo de las secciones experiencias y estudios */
+    .experiencias, .estudios{
+        width: 75%;
     }
 }
 
