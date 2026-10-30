@@ -1,0 +1,62 @@
+.estudios{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    color: azure;
+}
+
+.container-estudios{
+    width: 100%;
+    padding: 2rem;
+    margin-top: 5rem;
+    line-height: 2.5rem;
+    font-size: large;
+    margin: 8rem;
+}
+
+/* Media Queries agrupadas */
+
+/* Celular (pantallas pequeñas, hasta 767px) */
+@media (max-width: 767px){
+    /* Agregando el responsivo de las secciones experiencias y estudios */
+    .estudios{
+        width: 100%;
+        padding: 1rem;
+        margin-top: 1rem;
+        font-size: small;
+    }
+     .container-estudios{
+        width: 100%;
+        margin: 0rem;
+
+    }
+}
+/* Tablets (pantalla medianas, entre 768px y 1023px) */
+@media (min-width: 768px) and (max-width: 1023px){
+    .estudios{
+        width: 50%;
+        margin: 0 auto;
+    }
+    .container-estudios-section {
+        display:flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 1rem;
+    }
+}
+
+/* Escritorios(pantallas anchas, 1024px y superiores */ 
+@media (min-width: 1024px) {
+    .estudios{
+        width: 75%;
+        margin: 0 auto;
+    }
+    .container-estudios-section {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 1rem;
+    }
+}

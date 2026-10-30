@@ -1,0 +1,62 @@
+/* Creacion en clase 4: separo experiencias */
+.experiencias {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    color: azure;
+}
+
+.container-experiencias {
+    width: 100%;
+    padding: 2rem;
+    margin-top: 5rem;
+    line-height: 2.5rem;
+    font-size: large;
+    margin: 8rem;
+}
+
+/* Media Queries agrupadas */
+
+/* Celular (pantallas pequeñas, hasta 767px) */
+@media (max-width: 767px){
+    
+    .experiencias {
+        width: 100%;
+        padding: 1rem;
+        margin-top: 1rem;
+        font-size: small;
+    }
+    .container-experiencias {
+        width: 100%;
+        margin: 0rem;
+    }
+}
+/* Tablets (pantalla medianas, entre 768px y 1023px) */
+@media (min-width: 768px) and (max-width: 1023px){
+    .experiencias{
+        width: 50%;
+        margin: 0 auto;
+    }
+    .container-experiencias{
+        display:flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 1rem;
+    }
+}
+
+/* Escritorios(pantallas anchas, 1024px y superiores */ 
+@media (min-width: 1024px) {
+    .experiencias{
+        width: 75%;
+        margin: 0 auto;
+    }
+    .container-experiencias {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 1rem;
+    }    
+}

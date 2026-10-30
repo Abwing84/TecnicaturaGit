@@ -8,6 +8,8 @@
 /* Aplicando variable creada en el root al boy de nuestra Web */
 /* Reemplace el body con el uso de varibles css */
 body {
+    display: flex; /* Agregado en clase 4 */
+    flex-direction: column; /* Agregado en clase 4 */
     background: var(--body-bg-color);
     color: var(--colorh1-color);
     font-family: 'Sergoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -53,11 +55,11 @@ header {
 
 /* Barra de navegacion */
 .navigation{
-    display: flex;
-    gap: 3rem;
-    list-style: none;
-    justify-content: flex-end;
-    margin: 0 3rem;
+    display: flex; /* utiliza flexbox para organizr los elementos */
+    gap: 3rem; /* Establece un espacvio de 3rem entre cada elemento */
+    list-style: none; /* elimina los puntos de vista determinados */
+    justify-content: flex-end; /* Aline a los elementos hijos al final */
+    margin: 0 3rem; /* estrablece un margen de 0 en la parte superior */ 
 }
 /* Enlaces de la barra de navegacion configurados como si fueran botones */
 .navigation li{
@@ -71,48 +73,18 @@ header {
 }
 
 /* Estilo de los enlaces de la barra de navegacion */
-a{ 
+a{ /* etiqueta sancor */
     text-decoration: none; /* Elimina elñ subrayado */
     color: rgb(211, 212, 201);
      /* Establece el color del texto de los enlaces a negro */
 }
 
-.sobre-mi{
-    display: flex;
-    justify-content: center; /* Esto centra el elemento */
+/* Agregado en clase 4: Todo lo que contiene el main */ 
+.main-container{ /* agregado en clase 4 todo este bloque main-container */
+    display: flex; /* Flexibiliza todo el contenido del main */
+    flex-direction: column; /* La direccion de cada elemento sea colocada en forma de columna */
 }
 
-.container-sobre-mi{
-    display: flex;
-    width: 50%; /* Ancho */
-    padding: 5rem;
-    margin-top: 5rem; /* margen a lo alto */
-    line-height: 2.5rem; /* Espacio entre los parrafos */
-    font-size:  large; /* Tamaño de la fuente */
-    color: rgb(151, 156, 156);
-    gap: 5rem;
-    align-items: flex-start;
-    justify-content: center;
-}
-.foto-perfil{
-    border-radius: 50%;
-}
-
-.experiencias, .estudios{
-    display: flex;
-    justify-content: center;
-    padding: 2rem;
-    color: azure;
-}
-
-.container-experiencias, .container-estudios{
-    width: 100%;
-    padding: 2rem;
-    margin-top: 5rem;
-    line-height: 2.5rem;
-    font-size: large;
-    margin: 8rem;
-}
 
 /* Media Queries agrupadas */
 
@@ -127,25 +99,6 @@ a{
         gap: 1rem;
         align-items: center;
     }
-    .container-sobre-mi {
-        width: 100%;
-        box-sizing: border-box;
-        padding: 1rem;
-        margin-top: 1rem; /* Margen del alto */
-        line-height: 1.6rem; /* Espacio entre los parrafos del texto */
-        font-size: small; /* Tamaño de la fuente */
-        flex-direction: column;
-    }
-    /* Agregando el responsivo de las secciones experiencias y estudios */
-    .container-experiencias, .container-estudios{
-        width: 100%;
-        margin: 0rem;
-    }.experiencias, .estudios{
-        width: 100%;
-        padding: 1rem;
-        margin-top: 1rem;
-        font-size: small;
-    }
 }
 
 /* Tablets (pantalla medianas, entre 768px y 1023px) */
@@ -154,12 +107,9 @@ a{
         justify-content: center;
     }
     .navigation {
-        gap: 2rem;
+        gap: 3rem;
         justify-content: center;
-    }
-    /* Agregando el responsivo de las secciones experiencias y estudios */
-    .experiencias, .estudios{
-        width: 75%;
+        align-items: center;
     }
 }
 
@@ -172,5 +122,6 @@ a{
         gap: 3rem;
         justify-content: flex-end;
         margin: 0 3rem;
+        align-items: center;
     }
 }
