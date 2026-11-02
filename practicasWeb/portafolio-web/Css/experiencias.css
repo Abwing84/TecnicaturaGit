@@ -7,12 +7,14 @@
 }
 
 .container-experiencias {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     padding: 2rem;
     margin-top: 5rem;
     line-height: 2.5rem;
     font-size: large;
-    margin: 8rem;
+    margin: 3rem;
 }
 
 /* Media Queries agrupadas */
@@ -34,29 +36,25 @@
 /* Tablets (pantalla medianas, entre 768px y 1023px) */
 @media (min-width: 768px) and (max-width: 1023px){
     .experiencias{
-        width: 50%;
-        margin: 0 auto;
+        width: 75%;
     }
     .container-experiencias{
         display:flex;
-        flex-direction: column;
-        align-items: stretch;
+        align-items: flex-start;
         width: 100%;
-        gap: 1rem;
+        gap: 2rem;
     }
 }
 
 /* Escritorios(pantallas anchas, 1024px y superiores */ 
 @media (min-width: 1024px) {
     .experiencias{
-        width: 75%;
-        margin: 0 auto;
+        width: 100%;
     }
     .container-experiencias {
         display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        width: 100%;
-        gap: 1rem;
+        align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
+        width: 100%; /* Ocupa todo el ancho del contenedor */
+        gap: 2rem;
     }    
 }

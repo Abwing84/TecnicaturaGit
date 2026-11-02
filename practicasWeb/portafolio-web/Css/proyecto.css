@@ -1,0 +1,85 @@
+/* Agregado en clase 5: Estilos para el contenedor de proyectos */
+.proyectos{
+    width: 80%; 
+    padding: 1rem;
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total *1*/
+    background: var(--fondo-proyecto);
+}
+/* Esta es el contenedor de los proyectos, la galería de proyectos */
+.galeria-proyectos{
+    display: flex; /* Utiliza flexbox para organizar los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente línea si no caben en una sola */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 1rem; /* Espacio entre los elementos de la galería */
+    margin-top: 2rem; /* Espacio superior para separar la galería del título */
+    width: 100%; /* Ocupa todo el ancho disponible del contenedor *1*/
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total *1*/
+}
+/* Como es el contenedor del proyecto en general */
+.proyecto{
+    background-color: rgb#d8d3d31a; /* Color de fondo de la tarjeta */
+    border: 1px solid rgb(182, 177, 177);
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 15px; /* Espaciado interno */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total *1*/
+    width: calc((100% - 3rem) / 4); /* Distribuye cuatro tarjetas en una misma fila */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    text-align: center; /* Centrar el contenido dentro de la tarjeta */
+    min-width: 0; /* Permite que la tarjeta reduzca su ancho dentro de Flexbox *1*/
+}
+/* Imagen del proyecto *1*/
+.proyecto img{
+    display: block; /* Convierte la imagen en un elemento de bloque */
+    width: 100%; /* Ocupa todo el ancho disponible dentro de la tarjeta */
+    height: auto; /* Ocupa toda la altura disponible dentro de la tarjeta *1*/
+    max-width: 100%; /* Mantiene la proporción de la imagen */
+    border-radius: 5px; /* Redondea las esquinas de la imagen */
+}
+/* Titulo del Proyecto */
+.proyecto h3{
+    margin-top: 10px; /* Espaciado superior e inferior */
+    font-size: 1.2rem; /* Tamaño de fuente para el título del proyecto */
+}
+/* Descripción del proyecto */
+.proyecto p{
+    margin: 10px 0; /* Espaciado superior e inferior */
+}
+/* Boton enlace ancor */
+.proyecto a{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: rgb#d8d3d31a;
+    color:white;
+    border-radius: 5px;
+}
+/* Botones de los proyectos */
+.proyecto a:hover{
+    background-color: rgb#d8d3d31a;
+    color: white;
+    text-decoration: none;
+}
+
+/* Media Queries, Responsividad para la sección de proyectos */
+/* Celular (pantallas pequeñas, hasta 767px) */
+@media (max-width: 767px){
+    .proyecto{
+        width: calc(100%); /* La tarjeta ocupa todo el ancho del contenedor *1*/
+        margin-bottom: 20px; /* Espacio inferior entre tarjetas */
+    }
+}
+/* Tablets (pantalla medianas, entre 768px y 1023px) */
+@media (min-width: 768px) and (max-width: 1023px){
+    .proyecto{
+        width: calc((100% - 1rem) / 2); /* La tarjeta ocupa la mitad del ancho del contenedor *1*/
+        margin-bottom: 20px; /* Espacio inferior entre tarjetas */
+    }
+}
+/* Escritorios(pantallas anchas, 1024px y superiores */
+@media (min-width: 1024px) {
+    .proyecto{
+        width: calc((100% - 3rem) / 4); /* La tarjeta ocupa un cuarto del ancho del contenedor */
+        margin-bottom: 20px; /* Espacio inferior entre tarjetas */
+    }
+}
