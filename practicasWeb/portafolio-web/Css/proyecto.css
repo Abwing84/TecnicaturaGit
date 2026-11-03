@@ -1,3 +1,4 @@
+/* Agregado en clase 6: Creando section contactos con GOOGLE FORMS */
 /* Agregado en clase 5: Estilos para el contenedor de proyectos */
 .proyectos{
     width: 80%; 
@@ -24,7 +25,7 @@
     padding: 15px; /* Espaciado interno */
     box-sizing: border-box; /* Incluye el padding y el borde en el ancho total *1*/
     width: calc((100% - 3rem) / 4); /* Distribuye cuatro tarjetas en una misma fila */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    box-shadow: 0 0 0.5rem rgb(183, 185, 173); /* Sombra para dar profundidad */
     text-align: center; /* Centrar el contenido dentro de la tarjeta */
     min-width: 0; /* Permite que la tarjeta reduzca su ancho dentro de Flexbox *1*/
 }
@@ -50,13 +51,13 @@
     display: inline-block;
     margin-top: 10px;
     padding: 10px 15px;
-    background-color: rgb#d8d3d31a;
+    background-color: rgb(98, 99, 98);
     color:white;
     border-radius: 5px;
 }
 /* Botones de los proyectos */
 .proyecto a:hover{
-    background-color: rgb#d8d3d31a;
+    background-color: rgb(99, 100, 99);
     color: white;
     text-decoration: none;
 }

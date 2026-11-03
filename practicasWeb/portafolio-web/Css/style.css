@@ -52,7 +52,7 @@ header {
     padding: 0.5rem;
     border-radius: 0.5rem;
     background: #d8d3d31a;
-    box-shadow: 0 0 0.5rem rgb(183, 185, 173);
+    box-shadow: 0 0 0.5rem rgb(183, 185, 173); /* Agrega una sombra al elemento */
 }
 
 /* Estilo de los enlaces de la barra de navegacion */
