@@ -1,6 +1,8 @@
 /* Agregado en clase 6: Estilos para la sección de contacto */
 .contacto{
     margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
     padding: 1rem;
     background-color: var(--fondo-contacto);
     text-align: center;

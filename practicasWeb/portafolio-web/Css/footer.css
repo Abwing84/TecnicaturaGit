@@ -1,0 +1,108 @@
+/* Agregamos en la clase 7: la etiqueta footer*/
+
+/* Estilos generales del footer */
+.footer {
+    background-color: #353442; /* Fondo del footer en color gris oscuro */
+    padding: 20px 0; /* Espacio interno arriba y abajo */
+    text-align: center; /* Centrar el texto */
+}
+    /* Contenedor principal del footer*/
+.footer-container {
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor horizontalmente */
+    display: flex; /* Usamos flexbox para organizar los elementos */
+    flex-direction: column; /* Los elementos se organizan en columna */
+    align-items: center; /* Alineamos los elementos al centro */
+}
+
+/* Iconos de redes sociales */ 
+/* Estilos para la seccion de informacion del footer */
+.footer-info {
+    margin-bottom: 10px; /* Espacio inferior entre el texto y los iconos */
+}
+.footer-social {
+    order: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+/* Estilos para la seccion enlaces a redes sociales */
+.footer-social {
+    display: flex; /* Usamos flexbox para organizar los iconos */
+    justify-content: center; /* Centrar los iconos horizontalmente */
+    gap: 15px; /* Espacio entre los iconos */   
+}
+ /* Estilos para los enlaces de redes sociales */
+.footer-social a {
+    display: flex; /* Usamos flexbox para centrar el contenido del enlace */
+    align-items: center; /* Alineamos verticalmente el contenido del enlace */
+    justify-content: center; /* Centrar el contenido del enlace horizontalmente */
+    width: 40px; /* Ancho del enlace */
+    height: 40px; /* Alto del enlace */
+    border-radius: 50%; /* Hacemos que el enlace sea circular */
+    background-color: azure; /* Fondo del enlace en color azul claro */
+    transition: background-color 0.3s; /* Transición suave para el cambio de color y transformación */
+}
+/* Estilos para los iconos de redes sociales al pasar el cursor */
+.footer-social a:hover {
+    background-color: #555; /* Cambiamos el fondo del enlace al pasar el cursor */
+}
+
+/* Estilos para los iconos SVG dentro de los enlaces */
+.footer-social svg {
+    width: 24px;
+    height: 24px;
+    fill: #fff; /* Color de los iconos en blanco */
+} 
+
+/* Estilos responsivos para pantalas de tamaño tablets y menores */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Cambiamos la dirección de los elementos a columna */
+        align-items: center; /* Alineamos los elementos al centro */
+    }
+
+    .footer-social {
+        flex-wrap: wrap; /* Permitimos que los iconos se envuelvan a la siguiente línea si es necesario */
+        gap: 10px; /* Reducimos el espacio entre los iconos */
+    }
+
+    .footer-social a {
+        width: 35px; /* Reducimos el ancho del enlace */
+        height: 35px; /* Reducimos el alto del enlace */
+    }   
+
+    .footer-social svg {
+        width: 20px; /* Reducimos el tamaño de los iconos */
+        height: 20px; /* Reducimos el tamaño de los iconos */
+    }   
+    /* Estilos responsivos para pantallas de tamaño celular y menores */
+    @media (max-width: 480px) {
+        .footer {
+            padding: 15px 0; /* Reducimos el padding del footer */
+        }
+
+        .footer-info {
+            margin-bottom: 5px; /* Reducimos el espacio inferior entre el texto y los iconos */
+            font-size: 14px; /* Reducimos el tamaño de la fuente del texto */
+        }
+        .footer-social a {
+            gap: 8px; /* Reducimos el espacio entre los iconos */
+        }
+
+        .footer-social a {
+            width: 30px; /* Reducimos aún más el ancho del enlace */
+            height: 30px; /* Reducimos aún más el alto del enlace */
+        }
+
+        .footer-social svg {
+            width: 18px; /* Reducimos aún más el tamaño de los iconos */
+            height: 18px; /* Reducimos aún más el tamaño de los iconos */
+        }
+    }
+}
