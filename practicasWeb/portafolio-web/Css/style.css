@@ -11,7 +11,14 @@
 body {
     display: flex; /* Agregado en clase 4 */
     flex-direction: column; /* Agregado en clase 4 */
-    background: var(--body-bg-color);
+    /* Fondo tornasolado general del portfolio */
+    background:
+        radial-gradient(circle at 15% 20%, rgba(166, 80, 255, 0.20), transparent 45%),
+        radial-gradient(circle at 85% 80%, rgba(0, 210, 200, 0.15), transparent 48%),
+        linear-gradient(135deg, #090914, #17122b, #0b2630);
+
+    background-attachment: fixed;
+
     color: var(--text-color);
     font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
